@@ -1,0 +1,69 @@
+.button {
+	border-radius: 0px;
+	padding: 10px;
+	transition: all .1s ease-in-out;
+	color: white;
+	font-family: 'SofiaProBlack';
+	font-size: 20px;
+}
+
+
+#btn-feeling-one, #btn-feeling-two {
+	margin-bottom: $grid-gutter-width;
+	transition: all .1s ease-in-out;
+	box-sizing: border-box;
+	border: 2px solid $color-white;
+
+		&:hover {
+		
+		background-color: $color-purple;
+		color: $color-white;
+		animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  		transform: translate3d(0, 0, 0);
+  		backface-visibility: hidden;
+  		border: 2px solid $color-purple;
+	}
+}
+
+#btn-feeling-three, #btn-feeling-four {
+	margin-bottom: $grid-gutter-width;
+	display: none;
+	background-color: $color-purple;
+}
+
+#btn-feeling-five, #btn-feeling-six {
+	margin-bottom: $grid-gutter-width;
+	display: none;
+	background-color: $color-purple;
+}
+
+#btn-feeling-seven, #btn-feeling-eight {
+	margin-bottom: $grid-gutter-width;
+	display: none;
+	background-color: $color-purple;
+}
+
+.button-section-1, .button-section-2, .button-section-3, .button-section-4  {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
