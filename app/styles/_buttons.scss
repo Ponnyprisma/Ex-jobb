@@ -8,7 +8,7 @@
 }
 
 
-#btn-feeling-one, #btn-feeling-two {
+.button {
 	margin-bottom: $grid-gutter-width;
 	transition: all .1s ease-in-out;
 	box-sizing: border-box;
@@ -28,19 +28,17 @@
 #btn-feeling-three, #btn-feeling-four {
 	margin-bottom: $grid-gutter-width;
 	display: none;
-	background-color: $color-purple;
 }
 
 #btn-feeling-five, #btn-feeling-six {
 	margin-bottom: $grid-gutter-width;
 	display: none;
-	background-color: $color-purple;
 }
 
 #btn-feeling-seven, #btn-feeling-eight {
 	margin-bottom: $grid-gutter-width;
 	display: none;
-	background-color: $color-purple;
+
 }
 
 .button-section-1, .button-section-2, .button-section-3, .button-section-4  {
