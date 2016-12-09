@@ -24,6 +24,11 @@
   		border: 2px solid $color-purple;
 	}
 }
+//bts happy
+#btn-feeling-one, #btn-feeling-two {
+	margin-bottom: $grid-gutter-width;
+	display: none;
+}
 
 #btn-feeling-three, #btn-feeling-four {
 	margin-bottom: $grid-gutter-width;
@@ -40,8 +45,36 @@
 	display: none;
 
 }
+//btns sad
+#btn-feeling-one-sad, #btn-feeling-two-sad {
+	margin-bottom: $grid-gutter-width;
+	display: none;
+}
+
+#btn-feeling-three-sad, #btn-feeling-four-sad {
+	margin-bottom: $grid-gutter-width;
+	display: none;
+}
+
+#btn-feeling-five-sad, #btn-feeling-six-sad {
+	margin-bottom: $grid-gutter-width;
+	display: none;
+}
+
+#btn-feeling-seven-sad, #btn-feeling-eight-sad {
+	margin-bottom: $grid-gutter-width;
+	display: none;
+
+}
 
 .button-section-1, .button-section-2, .button-section-3, .button-section-4  {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+}
+
+.button-section-1-sad, .button-section-2-sad, .button-section-3-sad, .button-section-4-sad  {
 	position: absolute;
 	top: 50%;
 	left: 0;
