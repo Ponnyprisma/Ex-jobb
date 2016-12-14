@@ -5,6 +5,29 @@ $('body').addClass('animation');
 
 $( document ).ready(function() {
 
+var artWorkSad = ['images/porr.jpg', 'images/film.jpg', 'images/musik.jpg'];
+var random = Math.floor(Math.random() * artWorkSad.length);
+
+for (var i = 0; i < artWorkSad.length; i++) {
+	
+	document.getElementById("art-work-sad").src = artWorkSad[random];
+	console.log(artWorkSad[random]);
+
+}
+
+var artWorkHappy = ['images/porr.jpg', 'images/film.jpg', 'images/musik.jpg'];
+var random = Math.floor(Math.random() * artWorkHappy.length);
+
+for (var i = 0; i < artWorkHappy.length; i++) {
+	
+	document.getElementById("art-work-happy").src = artWorkHappy[random];
+	console.log(artWorkHappy[random]);
+
+}
+
+
+
+
 // start sad btn flow
 	$('.sad-btn').on('click', function() {
 		$('#btn-feeling-one-sad').show();
@@ -92,7 +115,7 @@ $( document ).ready(function() {
 
 		setTimeout(function() {
 			$('.container-feeling-seven-sad').hide();
-			$('.form-section-sad').show();   
+			$('.artwork-container-sad').show();   
 		}, 1000);
 
 	});
@@ -103,7 +126,7 @@ $( document ).ready(function() {
 
 		setTimeout(function() {
 			$('.container-feeling-eight-sad').hide();
-			$('.form-section-sad').show();   
+			$('.artwork-container-sad').show();   
 		}, 1000);
 
 	});
@@ -209,7 +232,7 @@ $( document ).ready(function() {
 
 		 setTimeout(function() {
      		$('.container-feeling-seven').hide(); 
-     		$('.form-section-happy').show();   
+     		$('.artwork-container-happy').show();   
   		}, 1000);
 
 	});
@@ -220,15 +243,14 @@ $( document ).ready(function() {
 
 		 setTimeout(function() {
      		$('.container-feeling-eight').hide();
-     		$('.form-section-happy').show();   
+     		$('.artwork-container-happy').show();   
   		}, 1000);
 
 	});
 
-	$('.sendform').on('click', function() {
-		$('.form-section-happy').hide();
-	  	$('.container-send-form').show();
 
-	});
+
+
+
 
 });

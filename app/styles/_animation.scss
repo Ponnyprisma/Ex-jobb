@@ -13,17 +13,16 @@
 }
 
 @keyframes colorChangeSadBackground {
-    0%   {background-color: #3a3a3a;}
-    25%  {background-color: #003543;}
-    30%  {background-color: #171717;}
-    50%  {background-color: #b9bcc1;}
-    100%  {background-color: #003543;}
-    //100% {background-image: url("/images/pinkbackground.png");}
+    0%   { background-color: $color-grey; }
+    25%  { background-color: $color-blurgreen; }
+    30%  { background-color: $color-grey; }
+    50%  { background-color: $color-blurgreen; }
+    100% { background-color: $color-blurgreen; }
 
 }
 
-.sadBackground{
-   // animation: colorChangeSadBackground 5s forwards;
+.sadBackground {
+   animation: colorChangeSadBackground 5s forwards;
 }
 
 @keyframes color-change-happy {
@@ -33,7 +32,7 @@
 }
 
 .colorChangeHappyVerticalText {
-    animation: color-change-happy  1s infinite;
+    animation: color-change-happy 1s infinite;
 }
 
 @keyframes color-change-sad {

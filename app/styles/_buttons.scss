@@ -1,4 +1,4 @@
-.button {
+.button, .button-sad {
 	border-radius: 0px;
 	padding: 10px;
 	transition: all .1s ease-in-out;
@@ -22,6 +22,23 @@
   		transform: translate3d(0, 0, 0);
   		backface-visibility: hidden;
   		border: 2px solid $color-purple;
+	}
+}
+
+.button-sad {
+	margin-bottom: $grid-gutter-width;
+	transition: all .1s ease-in-out;
+	box-sizing: border-box;
+	border: 2px solid $color-white;
+
+		&:hover {
+		
+		background-color: $color-lightgrey;
+		color: $color-black;
+		animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  		transform: translate3d(0, 0, 0);
+  		backface-visibility: hidden;
+  		border: 2px solid $color-lightgrey;
 	}
 }
 //bts happy
