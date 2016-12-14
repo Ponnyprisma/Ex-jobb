@@ -14,6 +14,7 @@ $fa-font-path: "/bower_components/font-awesome/fonts/";
 @import "main-content";
 @import "verticle-text";
 @import "form";
+@import "artwork";
 // endbower
 
 
@@ -27,6 +28,7 @@ body {
   user-select: none;
   margin: 0;
   height: 100%;
+  background-color: $color-lightgrey;
 }
 
 html {
@@ -51,6 +53,7 @@ html, body {
 @import "main-content";
 @import "verticle-text";
 @import "form";
+@import "artwork";
 
 */
 

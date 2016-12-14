@@ -1,22 +1,20 @@
-@keyframes example {
+@keyframes colorChangeHappyBackground {
     0%   {background-color: #FFB6C1;}
     25%  {background-color: #FFA07A;}
     30%  {background-color: #FFA07A;}
     50%  {background-color: #F08080;}
     100% {background-color: #F08080;}
-    //100% {background-image: url("/images/pinkbackground.png");}
-
 }
 
-.animation {
-    animation: example 5s forwards;
+.happyBackground {
+    animation: colorChangeHappyBackground 5s forwards;
 }
 
 @keyframes colorChangeSadBackground {
-    0%   { background-color: $color-grey; }
-    25%  { background-color: $color-blurgreen; }
-    30%  { background-color: $color-grey; }
-    50%  { background-color: $color-blurgreen; }
+    0%   { background-color: $color-lightgrey; }
+    25%  { background-color: $color-grey; }
+    30%  { background-color: $color-blue-grey; }
+    50%  {background-color: $color-blue-grey; }
     100% { background-color: $color-blurgreen; }
 
 }
@@ -82,40 +80,6 @@
 }
 
 
-
-@keyframes swing {
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-    }
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-
 .container-illustration {
 
     #illustration {
@@ -126,64 +90,6 @@
         animation-iteration-count: 1;
 
         }
-    }
-}
-
-@-webkit-keyframes grain {
-
-    0%
-    {
-        -webkit-transform: translate(0%, 0%);
-        transform: translate(0%, 0%);
-    }
-    10%
-    {
-        -webkit-transform:translate(-5%, -10%);
-        transform:translate(-5%, -10%);
-    }
-    20%
-    {
-        -webkit-transform: translate(-15%, 5%);
-        transform: translate(-15%, 5%);
-    }
-    30%
-    {
-        -webkit-transform: translate(7%, -25%);
-        transform: translate(7%, -25%);
-    }
-    40%
-    {
-        -webkit-transform: translate(-5%, 25%);
-        transform: translate(-5%, 25%);
-    }
-    50%
-    {
-        -webkit-transform: translate(-15%, 10%);
-        transform: translate(-15%, 10%);
-    }
-
-    60%
-    {
-        -webkit-transform: translate(-15%, 0%);
-        transform: translate(-15%, 0%);
-    }
-
-    70%
-    {
-        -webkit-transform: translate(-0%, 15%);
-        transform: translate(-0%, 15%);
-    }
-
-    80%
-    {
-        -webkit-transform: translate(3%, 35%);
-        transform: translate(3%, 35%);
-    }
-
-    90%
-    {
-        -webkit-transform: translate(-10%, 10%);
-        transform: translate(-10%, 10%);
     }
 }
 

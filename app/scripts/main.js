@@ -5,7 +5,7 @@ $('body').addClass('animation');
 
 $( document ).ready(function() {
 
-var artWorkSad = ['images/porr.jpg', 'images/film.jpg', 'images/musik.jpg'];
+var artWorkSad = ['images/quiz.jpg', 'images/rednails.jpg', 'images/sea.jpg', 'images/winter.jpg', 'images/dust.jpg'];
 var random = Math.floor(Math.random() * artWorkSad.length);
 
 for (var i = 0; i < artWorkSad.length; i++) {
@@ -15,7 +15,7 @@ for (var i = 0; i < artWorkSad.length; i++) {
 
 }
 
-var artWorkHappy = ['images/porr.jpg', 'images/film.jpg', 'images/musik.jpg'];
+var artWorkHappy = ['images/coral.jpg', 'images/feather.jpg', 'images/minimal.jpg', 'images/skulpture.jpg', 'images/purple.jpg'];
 var random = Math.floor(Math.random() * artWorkHappy.length);
 
 for (var i = 0; i < artWorkHappy.length; i++) {
@@ -35,7 +35,7 @@ for (var i = 0; i < artWorkHappy.length; i++) {
 		$('.happy-btn').hide();
 		$('.sad-btn').hide();
 		$('body').addClass('sadBackground');
-		$('#vertical-text-1').text("Sad Celebration").addClass('colorChangeSadVerticalText');
+		//$('#vertical-text-1').text("Sad sello").addClass('colorChangeSadVerticalText');
 	});
 
 	$('#btn-feeling-one-sad').on('click', function() {
@@ -146,9 +146,8 @@ for (var i = 0; i < artWorkHappy.length; i++) {
 		$('#btn-feeling-two').show();
 		$('.happy-btn').hide();
 		$('.sad-btn').hide();
-		$('body').addClass('animation');
-
-		$('#vertical-text-1').text("Happy Celebration").addClass('colorChangeHappyVerticalText');
+		$('body').addClass('happyBackground');
+		//$('#vertical-text-1').text("Happy Celebration").addClass('colorChangeHappyVerticalText');
 	});
 
 	$('#btn-feeling-one').on('click', function() {
