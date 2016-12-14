@@ -3,7 +3,7 @@
     25%  {background-color: #FFA07A;}
     30%  {background-color: #FFA07A;}
     50%  {background-color: #F08080;}
-    100%  {background-color: #F08080;}
+    100% {background-color: #F08080;}
     //100% {background-image: url("/images/pinkbackground.png");}
 
 }
@@ -12,11 +12,41 @@
     animation: example 5s forwards;
 }
 
-@keyframes color-change {
+@keyframes colorChangeSadBackground {
+    0%   { background-color: $color-grey; }
+    25%  { background-color: $color-blurgreen; }
+    30%  { background-color: $color-grey; }
+    50%  { background-color: $color-blurgreen; }
+    100% { background-color: $color-blurgreen; }
+
+}
+
+.sadBackground {
+   animation: colorChangeSadBackground 5s forwards;
+}
+
+@keyframes color-change-happy {
     0% { color: $color-purple; }
     50% { color: $color-hotpink; }
     100% { color: $color-purple; }
 }
+
+.colorChangeHappyVerticalText {
+    animation: color-change-happy 1s infinite;
+}
+
+@keyframes color-change-sad {
+    0% { color: black; }
+    50% { color: #b9bcc1; }
+    100% { color: black; }
+}
+
+.colorChangeSadVerticalText {
+    animation: color-change-sad  1s infinite;
+}
+
+
+
 
 @-webkit-keyframes swing {
     15%

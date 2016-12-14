@@ -1,4 +1,4 @@
-.form-section{
+.form-section-happy, .form-section-sad {
 	display: none;
 
 	h1 {
@@ -10,6 +10,11 @@
 	form {
 		background-color: $color-purple;
 		padding: $grid-gutter-width;
+	}
+
+	.text-gift {
+		color: $color-hotpink;
+		padding-bottom: $grid-gutter-width;
 	}
 	
 	input[type=submit] {

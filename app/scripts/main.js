@@ -5,6 +5,152 @@ $('body').addClass('animation');
 
 $( document ).ready(function() {
 
+var artWorkSad = ['images/porr.jpg', 'images/film.jpg', 'images/musik.jpg'];
+var random = Math.floor(Math.random() * artWorkSad.length);
+
+for (var i = 0; i < artWorkSad.length; i++) {
+	
+	document.getElementById("art-work-sad").src = artWorkSad[random];
+	console.log(artWorkSad[random]);
+
+}
+
+var artWorkHappy = ['images/porr.jpg', 'images/film.jpg', 'images/musik.jpg'];
+var random = Math.floor(Math.random() * artWorkHappy.length);
+
+for (var i = 0; i < artWorkHappy.length; i++) {
+	
+	document.getElementById("art-work-happy").src = artWorkHappy[random];
+	console.log(artWorkHappy[random]);
+
+}
+
+
+
+
+// start sad btn flow
+	$('.sad-btn').on('click', function() {
+		$('#btn-feeling-one-sad').show();
+		$('#btn-feeling-two-sad').show();
+		$('.happy-btn').hide();
+		$('.sad-btn').hide();
+		$('body').addClass('sadBackground');
+		$('#vertical-text-1').text("Sad Celebration").addClass('colorChangeSadVerticalText');
+	});
+
+	$('#btn-feeling-one-sad').on('click', function() {
+		$('.container-feeling-one-sad').show();
+		$('.button-section-1-sad').hide();
+		
+		  setTimeout(function() {
+     		$('.container-feeling-one-sad').hide();
+     		$('#btn-feeling-three-sad').show();   
+     		$('#btn-feeling-four-sad').show();    
+  		}, 1000);
+	});
+
+
+	$('#btn-feeling-two-sad').on('click', function() {
+		$('.container-feeling-two-sad').show();
+		$('.button-section-1-sad').hide();
+
+		setTimeout(function() {
+     		$('.container-feeling-two-sad').hide();  
+     		$('#btn-feeling-three-sad').show();   
+     		$('#btn-feeling-four-sad').show();   
+  		}, 1000);
+	});
+
+
+	$('#btn-feeling-three-sad').on('click', function() {
+		$('.container-feeling-three-sad').show();
+		$('.button-section-2-sad').hide();
+
+		setTimeout(function() {
+			$('.container-feeling-three-sad').hide(); 
+			$('#btn-feeling-five-sad').show();   
+     		$('#btn-feeling-six-sad').show();   
+		}, 1000);
+	});
+
+	$('#btn-feeling-four-sad').on('click', function() {
+		$('.container-feeling-four-sad').show();
+		$('.button-section-2-sad').hide();
+
+		setTimeout(function() {
+			$('.container-feeling-four-sad').hide();
+			$('#btn-feeling-five-sad').show();   
+     		$('#btn-feeling-six-sad').show(); 
+		}, 1000);
+
+	});
+
+	$('#btn-feeling-five-sad').on('click', function() {
+		$('.container-feeling-five-sad').show();
+		$('.button-section-3-sad').hide();
+
+		setTimeout(function() {
+			$('.container-feeling-five-sad').hide();
+			$('#btn-feeling-seven-sad').show();   
+     		$('#btn-feeling-eight-sad').show(); 
+		}, 1000);
+
+	});
+
+	$('#btn-feeling-six-sad').on('click', function() {
+		$('.container-feeling-six-sad').show();
+		$('.button-section-3-sad').hide();
+
+		setTimeout(function() {
+			$('.container-feeling-six-sad').hide();
+			$('#btn-feeling-seven-sad').show();   
+     		$('#btn-feeling-eight-sad').show(); 
+		}, 1000);
+
+	});
+
+	$('#btn-feeling-seven-sad').on('click', function() {
+		$('.container-feeling-seven-sad').show();
+		$('.button-section-4-sad').hide();
+
+		setTimeout(function() {
+			$('.container-feeling-seven-sad').hide();
+			$('.artwork-container-sad').show();   
+		}, 1000);
+
+	});
+
+	$('#btn-feeling-eight-sad').on('click', function() {
+		$('.container-feeling-eight-sad').show();
+		$('.button-section-4-sad').hide();
+
+		setTimeout(function() {
+			$('.container-feeling-eight-sad').hide();
+			$('.artwork-container-sad').show();   
+		}, 1000);
+
+	});
+
+	$('.send-form-sad').on('click', function() {
+		$('.form-section-sad').hide();
+	  	$('.container-send-form-sad').show();
+
+	});
+
+
+//end sad btn flow start happy btn flow
+
+	$('.happy-btn').on('click', function() {
+		
+		$('#btn-feeling-one').show();
+		$('#btn-feeling-two').show();
+		$('.happy-btn').hide();
+		$('.sad-btn').hide();
+		$('body').addClass('animation');
+
+		$('#vertical-text-1').text("Happy Celebration").addClass('colorChangeHappyVerticalText');
+	});
+
 	$('#btn-feeling-one').on('click', function() {
 		$('.container-feeling-one').show();
 		$('.button-section-1').hide();
@@ -86,7 +232,7 @@ $( document ).ready(function() {
 
 		 setTimeout(function() {
      		$('.container-feeling-seven').hide(); 
-     		$('.form-section').show();   
+     		$('.artwork-container-happy').show();   
   		}, 1000);
 
 	});
@@ -97,15 +243,14 @@ $( document ).ready(function() {
 
 		 setTimeout(function() {
      		$('.container-feeling-eight').hide();
-     		$('.form-section').show();   
+     		$('.artwork-container-happy').show();   
   		}, 1000);
 
 	});
 
-		$('.sendform').on('click', function() {
-		$('.form-section').hide();
-	  	$('.container-send-form').show();
 
-	});
+
+
+
 
 });
