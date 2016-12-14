@@ -10,7 +10,7 @@ ul {
 	li {
 		display: inline-block;
 		font-family: 'SofiaProBlack';
-		font-size: 16px;
+		font-size: 14px;
 
 
 		a {
@@ -21,7 +21,8 @@ ul {
 
 			&:hover {
 				text-decoration: none;
-				color: $color-purple;
+				color: $color-hotpink;
+				//color: $color-purple;
 			}
 
 			

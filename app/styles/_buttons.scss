@@ -89,13 +89,33 @@
 	top: 50%;
 	left: 0;
 	right: 0;
+	-webkit-transform: translate(0, -50%);
+  	transform: translate(0, -50%);
 }
 
 .button-section-1-sad, .button-section-2-sad, .button-section-3-sad, .button-section-4-sad  {
+	-webkit-transform: translate(0, -50%);
+  	transform: translate(0, -50%);
 	position: absolute;
 	top: 50%;
 	left: 0;
 	right: 0;
+}
+
+
+.container-first-step {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+  .sad-btn, .happy-btn {
+	font-size: 46px;
+	font-family: "SofiaProBlack";
+	text-transform: uppercase;
+	}
 }
 
 @keyframes shake {

@@ -1,44 +1,42 @@
 
 #vertical-text-1 {
-	position: absolute;
+
   left: 0;
   top: $grid-gutter-width*4;
-  transform: rotate(90deg);
-  font-family: 'SofiaProBlack';
   color: $color-hotpink;
 }
 	
 #vertical-text-2 {
-	position: absolute;
   left: 0;
   bottom: $grid-gutter-width*2;
-  transform: rotate(90deg);
-  font-family: 'SofiaProBlack';
-  color: $color-purple;
+  color: $color-white;
 }
 
-.sad-facebook {
-  color: black;
+#vertical-text-2, #vertical-text-1 {
+  position: absolute;
+  transform: rotate(90deg);
+  font-family: 'SofiaProBlack';
+
 }
 
 
 #logo-facebook {
 	position: absolute;
-	top: $grid-gutter-width*2.35;
+	top: $grid-gutter-width*3;
   right: 5px;
   font-size: 34px;
   padding-right: $grid-gutter-width;
-  color: $color-purple;
+  color: $color-white;
 }
 
 
 #logo-instagram {
 	position: absolute;
-	top: $grid-gutter-width*4;
+	top: $grid-gutter-width*4.5;
   right: 0;
   font-size: 34px;
   padding-right: $grid-gutter-width;
-  color: $color-purple;
+  color: $color-white;
 
 }
 
