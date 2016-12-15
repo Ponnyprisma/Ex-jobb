@@ -1,9 +1,9 @@
 @keyframes colorChangeHappyBackground {
-    0%   {background-color: #FFB6C1;}
-    25%  {background-color: #FFA07A;}
-    30%  {background-color: #FFA07A;}
-    50%  {background-color: #F08080;}
-    100% {background-color: #F08080;}
+    0%   {background-color: $color-light-pink;}
+    25%  {background-color: $color-lightsalmon;}
+    30%  {background-color: $color-lightsalmon;}
+    50%  {background-color: $color-lightcoral;}
+    100% {background-color: $color-lightcoral;}
 }
 
 .happyBackground {
@@ -11,10 +11,10 @@
 }
 
 @keyframes colorChangeSadBackground {
-    0%   { background-color: $color-lightgrey; }
-    25%  { background-color: $color-grey; }
-    30%  { background-color: $color-blue-grey; }
-    50%  {background-color: $color-blue-grey; }
+    0%   { background-color: $color-blurgreen-dark }
+    25%  { background-color: $color-blue-darker; }
+    30%  { background-color: $color-blue-darker; }
+    50%  { background-color: $color-blurgreen; }
     100% { background-color: $color-blurgreen; }
 
 }
@@ -93,10 +93,4 @@
     }
 }
 
-
-
-#grain-background {
-    -webkit-animation: grain 2s ease;
-    animation: grain 1s ease;
-}
 

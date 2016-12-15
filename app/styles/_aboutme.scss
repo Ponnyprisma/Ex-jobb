@@ -1,27 +1,22 @@
-#art-work-happy, #art-work-sad {
-	
+#profile-pic {
+
 	@include for-phone-only {
 		width: 290px;
 	}
 
 	@include for-tablet-portrait-up {
-		width: 400px;
+		width: 300px;
 	}
 
 	@include for-tablet-landscape-up {
-		width: 500px;
+		width: 400px;
 	}
 
 	@include for-desktop-up {
-		width: 500px;
+		width: 400px;
 	}
 }
 
-.artwork-container-sad {
-	
-
-}
-
-.artwork-container-happy {
-	
+.aboutme-text {
+	font-family: 'Lato-black';
 }
