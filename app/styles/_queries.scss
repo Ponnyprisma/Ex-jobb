@@ -1,23 +1,15 @@
-@media only screen and (min-width: 320px){
-
-	#art-work-happy, #art-work-sad {
-		width : 200px;
-	}
-
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
 }
-
-@media only screen and (min-width: 768px) {
-
-	#art-work-happy, #art-work-sad {
-		width :500px;
-	}
-
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
 }
-
-@media only screen and (min-width: 1200px) {
-
-	#art-work-happy, #art-work-sad {
-		width : 500px;
-	}
-
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
 }

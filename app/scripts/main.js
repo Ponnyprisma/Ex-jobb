@@ -1,4 +1,3 @@
-
 console.log('\'Allo \'Allo!');
 
 $('body').addClass('animation');
@@ -25,8 +24,13 @@ for (var i = 0; i < artWorkHappy.length; i++) {
 
 }
 
-
-
+var a = document.createElement('a');
+	a.className = "download-btn";
+	a.href = artWorkHappy[random];
+	a.download = artWorkHappy[random];
+	a.textContent = 'Download file!';
+	document.body.appendChild(a);
+	
 
 // start sad btn flow
 	$('.sad-btn').on('click', function() {
@@ -147,7 +151,7 @@ for (var i = 0; i < artWorkHappy.length; i++) {
 		$('.happy-btn').hide();
 		$('.sad-btn').hide();
 		$('body').addClass('happyBackground');
-		//$('#vertical-text-1').text("Happy Celebration").addClass('colorChangeHappyVerticalText');
+		$('#vertical-text-1').text("Happy Celebration").addClass('colorChangeHappyVerticalText');
 	});
 
 	$('#btn-feeling-one').on('click', function() {
