@@ -30,6 +30,19 @@ html, body {
   overflow-x: hidden;
 }
 
+h1 {
+  font-family: 'SofiaProBlack';
+  font-size: 50px;
+  color: $color-purple;
+  //display: none;
+}
+
+h2 {
+  font-family: 'SofiaProBlack';
+  font-size: 40px;
+  color: $color-white;
+}
+
 
 /*
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
