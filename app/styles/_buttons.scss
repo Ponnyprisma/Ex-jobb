@@ -84,6 +84,7 @@
 	display: none;
 
 }
+/*
 
 .button-section-1, .button-section-2, .button-section-3, .button-section-4  {
 	position: absolute;
@@ -93,7 +94,7 @@
 	-webkit-transform: translate(0, -50%);
   	transform: translate(0, -50%);
 }
-
+*/
 .button-section-1-sad, .button-section-2-sad, .button-section-3-sad, .button-section-4-sad  {
 	-webkit-transform: translate(0, -50%);
   	transform: translate(0, -50%);
@@ -112,10 +113,8 @@
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 
-	.sad-btn, .happy-btn {
-		font-size: 46px;
-		font-family: 'SofiaProBlack';
-		text-transform: uppercase;
+	#sad-smiley-btn, #happy-smiley-btn {
+		font-size: 80px;
 		cursor: pointer;
 	}
 
@@ -130,6 +129,10 @@
 		color: $color-hotpink;
 		text-decoration: none;
 	}
+}
+
+.download-btn {
+	display:none;
 }
 
 @keyframes shake {
