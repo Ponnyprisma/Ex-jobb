@@ -1,4 +1,7 @@
+
 #profile-pic {
+
+	margin-top: 20px;
 
 	@include for-phone-only {
 		width: 290px;
@@ -17,6 +20,10 @@
 	}
 }
 
-.aboutme-text {
-	font-family: 'Lato-black';
+.about-me-text {
+	
+color: $color-hotpink;
+	@include for-phone-only {
+		text-align: center;
+	}
 }

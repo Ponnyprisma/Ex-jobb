@@ -80,17 +80,4 @@
 }
 
 
-.container-illustration {
-
-    #illustration {
-        &:hover {
-        -webkit-animation: swing 1s ease;
-        animation: swing 1s ease;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
-
-        }
-    }
-}
-
 

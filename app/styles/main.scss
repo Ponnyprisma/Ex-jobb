@@ -5,6 +5,19 @@ $fa-font-path: "/bower_components/font-awesome/fonts/";
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono|Shrikhand|Yatra+One&subset=greek,gujarati,latin-ext');
+@import "queries";
+@import "variables";
+@import "header";
+@import "animation";
+@import "buttons";
+@import "main-content";
+@import "verticle-text";
+@import "form";
+@import "artwork";
+@import "aboutme";
 // endbower
 
 
@@ -18,7 +31,7 @@ body {
   user-select: none;
   margin: 0;
   height: 100%;
-  background-color: $color-lightgrey;
+  background-color: $color-blue-grey;
 }
 
 html {
@@ -43,7 +56,17 @@ h2 {
   color: $color-white;
 }
 
+p {
+  font-family: 'SofiaProBlack';
+  color: $color-white;
+}
+.how-do-you-feel {
+  color: $color-white;
 
+  @include for-phone-only {
+    font-size: 32px;
+  }
+}
 /*
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";

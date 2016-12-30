@@ -25,16 +25,22 @@ for (var i = 0; i < artWorkHappy.length; i++) {
 
 }
 
-var a = document.createElement('a');
-	a.className = "download-btn";
-	a.href = artWorkHappy[random];
-	a.download = artWorkHappy[random];
-	a.textContent = 'Download file!';
-	document.body.appendChild(a);
+var artworkLink = document.createElement('a');
+	artworkLink.className = "download-btn";
+	artworkLink.href = artWorkHappy[random];
+	artworkLink.download = artWorkHappy[random];
+	artworkLink.textContent = 'Download you artwork!';
+	document.getElementById("download-btn-container-happy").appendChild(artworkLink); 
+
+var artworkLinkSad = document.createElement('a');
+	artworkLinkSad.className = "download-btn";
+	artworkLinkSad.href = artWorkSad[random];
+	artworkLinkSad.download = artWorkSad[random];
+	artworkLinkSad.textContent = 'Download you artwork!';
+	document.getElementById("download-btn-container-sad").appendChild(artworkLinkSad); 
 	
 
-
-
+	
 
 
 // start sad btn flow
@@ -59,7 +65,7 @@ var a = document.createElement('a');
      		$('#btn-feeling-four-sad').show();  
      		$('.feeling-copy-section-2').show(); 
     
-  		}, 1000);
+  		}, 10000);
 	});
 
 
@@ -72,7 +78,7 @@ var a = document.createElement('a');
      		$('#btn-feeling-three-sad').show();   
      		$('#btn-feeling-four-sad').show();  
      		$('.feeling-copy-section-2').show();  
-  		}, 1000);
+  		}, 10000);
 	});
 
 	$('#btn-feeling-three-sad').on('click', function() {
@@ -84,7 +90,7 @@ var a = document.createElement('a');
 			$('#btn-feeling-five-sad').show();   
      		$('#btn-feeling-six-sad').show();   
      		$('.feeling-copy-section-3').show();
-		}, 1000);
+		}, 10000);
 	});
 
 	$('#btn-feeling-four-sad').on('click', function() {
@@ -96,7 +102,7 @@ var a = document.createElement('a');
 			$('#btn-feeling-five-sad').show();   
      		$('#btn-feeling-six-sad').show(); 
      		$('.feeling-copy-section-3').show();
-		}, 1000);
+		}, 10000);
 
 	});
 
@@ -109,7 +115,7 @@ var a = document.createElement('a');
 			$('#btn-feeling-seven-sad').show();   
      		$('#btn-feeling-eight-sad').show(); 
      		$('.feeling-copy-section-4').show();
-		}, 1000);
+		}, 10000);
 
 	});
 
@@ -122,7 +128,7 @@ var a = document.createElement('a');
 			$('#btn-feeling-seven-sad').show();   
      		$('#btn-feeling-eight-sad').show(); 
      		$('.feeling-copy-section-4').show();
-		}, 1000);
+		}, 10000);
 
 	});
 
@@ -133,7 +139,7 @@ var a = document.createElement('a');
 		setTimeout(function() {
 			$('.container-feeling-seven-sad').hide();
 			$('.artwork-container-sad').show();   
-		}, 1000);
+		}, 10000);
 
 	});
 
@@ -144,18 +150,11 @@ var a = document.createElement('a');
 		setTimeout(function() {
 			$('.container-feeling-eight-sad').hide();
 			$('.artwork-container-sad').show();   
-		}, 1000);
+		}, 10000);
 
 	});
 
-	$('.send-form-sad').on('click', function() {
-		$('.form-section-sad').hide();
-	  	$('.container-send-form-sad').show();
-
-	});
-
-
-//end sad btn flow start happy btn flow
+//////////////////////////////end sad btn flow start happy btn flow
 
 	$('#happy-smiley-btn').on('click', function() {
 		
@@ -165,7 +164,7 @@ var a = document.createElement('a');
 		$('#sad-smiley-btn').hide();
 		$('body').addClass('happyBackground');
 		$('.how-do-you-feel').hide();
-		$('#vertical-text-1').text("Happy Celebration").addClass('colorChangeHappyVerticalText');
+		//$('#vertical-text-1').text("Happy Celebration").addClass('colorChangeHappyVerticalText');
 		$('.happy-copy-section-1').show();
 	});
 
@@ -179,7 +178,7 @@ var a = document.createElement('a');
      		$('#btn-feeling-three').show();   
      		$('#btn-feeling-four').show();   
      		$('.happy-copy-section-2').show();
-  		}, 1000);
+  		}, 10000);
 
 	});
 
@@ -194,7 +193,7 @@ var a = document.createElement('a');
      		$('#btn-feeling-three').show();   
      		$('#btn-feeling-four').show(); 
      		$('.happy-copy-section-2').show();  
-  		}, 1000);
+  		}, 10000);
 	});
 
 
@@ -207,7 +206,7 @@ var a = document.createElement('a');
      		$('#btn-feeling-five').show();   
      		$('#btn-feeling-six').show();   
      		$('.happy-copy-section-3').show();
-  		}, 1000);
+  		}, 10000);
 	});
 
 
@@ -220,7 +219,7 @@ var a = document.createElement('a');
      		$('#btn-feeling-five').show();   
      		$('#btn-feeling-six').show();  
      		$('.happy-copy-section-3').show(); 
-  		}, 1000);
+  		}, 10000);
 	});
 
 
@@ -233,7 +232,7 @@ var a = document.createElement('a');
      		$('#btn-feeling-seven').show();   
      		$('#btn-feeling-eight').show();   
      		$('.happy-copy-section-4').show(); 
-  		}, 1000);
+  		}, 10000);
 	});
 
 
@@ -246,7 +245,7 @@ var a = document.createElement('a');
      		$('#btn-feeling-seven').show();   
      		$('#btn-feeling-eight').show();   
      		$('.happy-copy-section-4').show(); 
-  		}, 1000);
+  		}, 10000);
 
 	});
 
@@ -257,7 +256,7 @@ var a = document.createElement('a');
 		 setTimeout(function() {
      		$('.container-feeling-seven').hide(); 
      		$('.artwork-container-happy').show();   
-  		}, 1000);
+  		}, 10000);
 
 	});
 
@@ -268,8 +267,8 @@ var a = document.createElement('a');
 		 setTimeout(function() {
      		$('.container-feeling-eight').hide();
      		$('.artwork-container-happy').show(); 
-     		$('.download-btn').show();
-  		}, 1000);
+     		$('#download-btn-container-happy').show();
+  		}, 10000);
 
 	});
 

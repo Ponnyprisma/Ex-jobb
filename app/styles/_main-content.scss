@@ -1,14 +1,5 @@
 //Happy containers
 
-.container-first-step {
-	h1 {
-	font-family: 'SofiaProBlack';
-	font-size: 50px;
-	color: $color-purple;
-  }
-
-}
-
 .feeling-copy-section-1, .feeling-copy-section-2, .feeling-copy-section-3, .feeling-copy-section-4 {
 	display: none;
 }
@@ -52,14 +43,6 @@
 	display: none;
 }
 
-.button-section-1 {
-
- 	h1 {
- 		font-size: 100px;
- 		color: $color-black;
- 		font-family: 'SofiaProBlack';
- 	}
-}
 
 //sad Containers
 
@@ -92,8 +75,22 @@
 
 .container-feeling-eight-sad {
 	display: none;
+	
 }
 
 .artwork-container-sad {
 	display: none;
+}
+
+.container-loading-artwork {
+	display: none;
+}
+
+.center-container {
+	position: absolute;
+	top: 50%;
+  	left: 0;
+  	right: 0;
+ 	 -webkit-transform: translate(0, -50%);
+  	transform: translate(0, -50%);
 }

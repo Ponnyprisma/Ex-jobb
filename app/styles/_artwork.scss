@@ -1,7 +1,7 @@
 #art-work-happy, #art-work-sad {
 	
 	@include for-phone-only {
-		width: 290px;
+		width: 300px;
 	}
 
 	@include for-tablet-portrait-up {
@@ -9,19 +9,65 @@
 	}
 
 	@include for-tablet-landscape-up {
-		width: 500px;
+		width: 400px;
 	}
 
 	@include for-desktop-up {
-		width: 500px;
+		width: 420px;
 	}
 }
 
-.artwork-container-sad {
+.artwork-container-sad, .artwork-container-happy {
 	
+	@include for-desktop-up {
+		margin-top: $grid-gutter-width*3;
+	}
 
+	@include for-tablet-portrait-up {
+		margin-top: $grid-gutter-width*4;
+	}
+
+	@include for-phone-only {
+		margin-top: $grid-gutter-width*6;
+	}
+}
+
+.animations {
+	@include for-phone-only {
+		width: 400px;
+	}
+
+	@include for-tablet-portrait-up {
+		width: 800px;
+	}
+
+	@include for-desktop-up {
+		width: 900px;
+	}
 }
 
 .artwork-container-happy {
 	
 }
+
+#download-btn-container-happy, #download-btn-container-sad {
+	margin-top: $grid-gutter-width;
+	
+	a {
+		color: $color-white;
+		font-family: 'SofiaProBlack';
+		cursor: pointer;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-hotpink;
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+
+
+
