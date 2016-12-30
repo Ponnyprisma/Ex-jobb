@@ -25,18 +25,18 @@ for (var i = 0; i < artWorkHappy.length; i++) {
 
 }
 
-var artworkLink = document.createElement('a');
-	artworkLink.className = "download-btn";
-	artworkLink.href = artWorkHappy[random];
-	artworkLink.download = artWorkHappy[random];
-	artworkLink.textContent = 'Download you artwork!';
-	document.getElementById("download-btn-container-happy").appendChild(artworkLink); 
+var artworkLinkHappy = document.createElement('a');
+	artworkLinkHappy.className = "download-btn-happy";
+	artworkLinkHappy.href = artWorkHappy[random];
+	artworkLinkHappy.download = artWorkHappy[random];
+	artworkLinkHappy.textContent = 'Download you artwork!';
+	document.getElementById("download-btn-container-happy").appendChild(artworkLinkHappy); 
 
 var artworkLinkSad = document.createElement('a');
-	artworkLinkSad.className = "download-btn";
+	artworkLinkSad.className = "download-btn-sad";
 	artworkLinkSad.href = artWorkSad[random];
 	artworkLinkSad.download = artWorkSad[random];
-	artworkLinkSad.textContent = 'Download you artwork!';
+	artworkLinkSad.textContent = 'Download your sad artwork!';
 	document.getElementById("download-btn-container-sad").appendChild(artworkLinkSad); 
 	
 
@@ -65,7 +65,7 @@ var artworkLinkSad = document.createElement('a');
      		$('#btn-feeling-four-sad').show();  
      		$('.feeling-copy-section-2').show(); 
     
-  		}, 10000);
+  		}, 1000);
 	});
 
 
@@ -78,7 +78,7 @@ var artworkLinkSad = document.createElement('a');
      		$('#btn-feeling-three-sad').show();   
      		$('#btn-feeling-four-sad').show();  
      		$('.feeling-copy-section-2').show();  
-  		}, 10000);
+  		}, 1000);
 	});
 
 	$('#btn-feeling-three-sad').on('click', function() {
@@ -90,7 +90,7 @@ var artworkLinkSad = document.createElement('a');
 			$('#btn-feeling-five-sad').show();   
      		$('#btn-feeling-six-sad').show();   
      		$('.feeling-copy-section-3').show();
-		}, 10000);
+		}, 1000);
 	});
 
 	$('#btn-feeling-four-sad').on('click', function() {
@@ -102,7 +102,7 @@ var artworkLinkSad = document.createElement('a');
 			$('#btn-feeling-five-sad').show();   
      		$('#btn-feeling-six-sad').show(); 
      		$('.feeling-copy-section-3').show();
-		}, 10000);
+		}, 1000);
 
 	});
 
@@ -115,7 +115,7 @@ var artworkLinkSad = document.createElement('a');
 			$('#btn-feeling-seven-sad').show();   
      		$('#btn-feeling-eight-sad').show(); 
      		$('.feeling-copy-section-4').show();
-		}, 10000);
+		}, 1000);
 
 	});
 
@@ -128,7 +128,7 @@ var artworkLinkSad = document.createElement('a');
 			$('#btn-feeling-seven-sad').show();   
      		$('#btn-feeling-eight-sad').show(); 
      		$('.feeling-copy-section-4').show();
-		}, 10000);
+		}, 1000);
 
 	});
 
@@ -137,9 +137,17 @@ var artworkLinkSad = document.createElement('a');
 		$('.button-section-4-sad').hide();
 
 		setTimeout(function() {
-			$('.container-feeling-seven-sad').hide();
-			$('.artwork-container-sad').show();   
-		}, 10000);
+			$('.container-feeling-seven-sad').hide()
+     		$('.container-loading-artwork').show();
+
+     		setTimeout(function() {
+     			$('.container-loading-artwork').hide();
+     			$('.container-feeling-seven-sad').hide();
+     			$('.artwork-container-sad').show(); 
+     			$('#download-btn-container-sad').show();
+     		}, 3000); //loding artwork göms efter  6 sekunder och visar sedan konsverket
+ 	
+     	}, 1000); // animationen visas i 1 sekund
 
 	});
 
@@ -148,9 +156,18 @@ var artworkLinkSad = document.createElement('a');
 		$('.button-section-4-sad').hide();
 
 		setTimeout(function() {
-			$('.container-feeling-eight-sad').hide();
-			$('.artwork-container-sad').show();   
-		}, 10000);
+			$('.container-feeling-eight-sad').hide()
+     		$('.container-loading-artwork').show();
+
+     		setTimeout(function() {
+     			$('.container-loading-artwork').hide();
+     			$('.container-feeling-eight-sad').hide();
+     			$('.artwork-container-sad').show(); 
+     			$('#download-btn-container-sad').show();
+     		}, 3000); //loding artwork göms efter  6 sekunder och visar sedan konsverket
+ 	
+     	}, 1000); // animationen visas i 1 sekund
+
 
 	});
 
@@ -178,7 +195,7 @@ var artworkLinkSad = document.createElement('a');
      		$('#btn-feeling-three').show();   
      		$('#btn-feeling-four').show();   
      		$('.happy-copy-section-2').show();
-  		}, 10000);
+  		}, 1000);
 
 	});
 
@@ -193,7 +210,7 @@ var artworkLinkSad = document.createElement('a');
      		$('#btn-feeling-three').show();   
      		$('#btn-feeling-four').show(); 
      		$('.happy-copy-section-2').show();  
-  		}, 10000);
+  		}, 1000);
 	});
 
 
@@ -206,7 +223,7 @@ var artworkLinkSad = document.createElement('a');
      		$('#btn-feeling-five').show();   
      		$('#btn-feeling-six').show();   
      		$('.happy-copy-section-3').show();
-  		}, 10000);
+  		}, 1000);
 	});
 
 
@@ -219,7 +236,7 @@ var artworkLinkSad = document.createElement('a');
      		$('#btn-feeling-five').show();   
      		$('#btn-feeling-six').show();  
      		$('.happy-copy-section-3').show(); 
-  		}, 10000);
+  		}, 1000);
 	});
 
 
@@ -232,7 +249,7 @@ var artworkLinkSad = document.createElement('a');
      		$('#btn-feeling-seven').show();   
      		$('#btn-feeling-eight').show();   
      		$('.happy-copy-section-4').show(); 
-  		}, 10000);
+  		}, 1000);
 	});
 
 
@@ -245,7 +262,7 @@ var artworkLinkSad = document.createElement('a');
      		$('#btn-feeling-seven').show();   
      		$('#btn-feeling-eight').show();   
      		$('.happy-copy-section-4').show(); 
-  		}, 10000);
+  		}, 1000);
 
 	});
 
@@ -253,24 +270,48 @@ var artworkLinkSad = document.createElement('a');
 		$('.button-section-4').hide();
 	  	$('.container-feeling-seven').show();
 
+/*
+gammal groll innan renderfunktionen
 		 setTimeout(function() {
      		$('.container-feeling-seven').hide(); 
-     		$('.artwork-container-happy').show();   
-  		}, 10000);
+     		$('.artwork-container-happy').show();  
+     		$('#download-btn-container-happy').show();
+  		}, 1000);
+*/
+		setTimeout(function() {
+			$('.container-feeling-seven').hide()
+     		$('.container-loading-artwork').show();
+
+     		setTimeout(function() {
+     			$('.container-loading-artwork').hide();
+     			$('.container-feeling-seven').hide();
+     			$('.artwork-container-happy').show(); 
+     			$('#download-btn-container-happy').show();
+     		}, 3000); //loding artwork göms efter  6 sekunder och visar sedan konsverket
+ 	
+     	}, 1000); // animationen visas i 1 sekund
+
 
 	});
 
 	$('#btn-feeling-eight').on('click', function() {
 		$('.button-section-4').hide();
-	  	$('.container-feeling-eight').show();
+	  	$('.container-feeling-eight').show()
+     		
+     	setTimeout(function() {
+			$('.container-feeling-eight').hide()
+     		$('.container-loading-artwork').show();
 
-		 setTimeout(function() {
-     		$('.container-feeling-eight').hide();
-     		$('.artwork-container-happy').show(); 
-     		$('#download-btn-container-happy').show();
-  		}, 10000);
+     		setTimeout(function() {
+     			$('.container-loading-artwork').hide();
+     			$('.container-feeling-eight').hide();
+     			$('.artwork-container-happy').show(); 
+     			$('#download-btn-container-happy').show();
+     		}, 3000); //loding artwork göms efter  6 sekunder och visar sedan konsverket
+ 	
+     	}, 1000); // animationen visas i 1 sekund
+  	});
 
-	});
 
 
 
