@@ -1,7 +1,7 @@
 #art-work-happy, #art-work-sad {
 	
 	@include for-phone-only {
-		width: 300px;
+		width: 200px;
 	}
 
 	@include for-tablet-portrait-up {
@@ -17,24 +17,34 @@
 	}
 }
 
-.artwork-container-sad, .artwork-container-happy {
+#artwork-container-sad, #artwork-container-happy {
+
+	display: none;
+
+	h2 {
+		margin-bottom: $grid-gutter-width;
+		@include for-phone-only {
+			font-size: 20px;
+			margin-top: 0px;
+		}
+	}
 	
 	@include for-desktop-up {
 		margin-top: $grid-gutter-width*3;
 	}
 
 	@include for-tablet-portrait-up {
-		margin-top: $grid-gutter-width*4;
+		margin-top: $grid-gutter-width*3;
 	}
 
 	@include for-phone-only {
-		margin-top: $grid-gutter-width*6;
+		margin-top: 0px;
 	}
 }
 
 .animations {
 	@include for-phone-only {
-		width: 400px;
+		width: 300px;
 	}
 
 	@include for-tablet-portrait-up {
@@ -46,16 +56,13 @@
 	}
 }
 
-.artwork-container-happy {
-	
-}
 
 #download-btn-container-happy, #download-btn-container-sad {
 	margin-top: $grid-gutter-width;
 	
 	a {
 		color: $color-white;
-		font-family: 'SofiaProBlack';
+		font-family: 'AvenirNext-Bold';
 		cursor: pointer;
 		text-decoration: none;
 

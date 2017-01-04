@@ -26,15 +26,13 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    
 <div class="container-fluid wrapper">
-
-        <p id="vertical-text-1">Hello feelings!</p>
-        <p id="vertical-text-2">Sad & Happy</p>
-        <a href="#"><i id="logo-facebook" class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i id="logo-instagram" class="fa fa-instagram" aria-hidden="true"></i></a>
-        <i class="fa fa-heart" id="logo-happy-heart" aria-hidden="true"></i>
+        <!--<i class="fa fa-arrow-right" id="next-btn" aria-hidden="true"></i>-->
+       <div class="hidden-xs"><p id="vertical-text-1">Hello feelings!</p></div>
+       <div class="hidden-xs"> <p id="vertical-text-2">Sad & Happy</p></div>
+       <div class="hidden-xs"><a href="#"><i id="logo-facebook" class="fa fa-facebook" aria-hidden="true"></i></a></div>
+        <div class="hidden-xs"><a href="#"><i id="logo-instagram" class="fa fa-instagram" aria-hidden="true"></i></a></div>
+        <div class="hidden-xs"><i class="fa fa-heart" id="logo-happy-heart" aria-hidden="true"></i></div>
 
         <div class="row">
             <div class="col-xs-12">
@@ -47,23 +45,27 @@
                 </div>
             </div>
         </div>
-
         <div class="row container-first-step">
+
             <div class="col-xs-12 text-center">
-                <h1 class="how-do-you-feel">How are you feeling?<h1>
+                <h1 id="how-do-you-feel">Are you happy or sad?<h1>
             </div>
-            <div class="col-xs-12 col-md-2 col-md-offset-4 text-center">
+            <div class="col-xs-4 col-xs-offset-2 col-md-2 col-md-offset-4 col-lg-2 col-lg-offset-4 text-center">
                 <i class="fa fa-smile-o" id="happy-smiley-btn" aria-hidden="true"></i>
             </div>
-            <div class="col-xs-12 col-md-2 text-center">
+            <div class="col-xs-4 col-md-2 col-lg-2 text-center">
                  <i class="fa fa-frown-o" id="sad-smiley-btn" aria-hidden="true"></i>
             </div>
+            <div class="explanation-text col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4 text-center">
+                <p>Hello Feelings is a interactive art site, where you render an artwork by a series of choices based on You're personal and momentary emotions.</p>
+            </div>
         </div>
-
+    
+    <!--HAPPY VIEW-->
     <div class="container-happy-viwe">
         <div class="row button-section-1">
             <div class="col-xs-12 text-center">
-                <h2 class="happy-copy-section-1">Witch feeling decripes you the most?<h2>
+                <h2 class="happy-copy-section-1">Do you feel enthusiastic or satisfied?<h2>
             </div>
             <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3 text-center">
                 <div class="button" id="btn-feeling-one">Enthusiastic</div>
@@ -76,20 +78,13 @@
         <div class="row center-container">
             <div class="container-feeling-one">
                 <div class="col-xs-12 text-center">
-                    <p>Enthusiastic</p>
                     <img src="images/enthusiastic.gif" class="animations">
                 </div>
             </div>
             <div class="container-feeling-two">
-                <div class="col-xs-12 col-md-12 text-center">
-                    <p>Satisfied text</p>
-                </div>
                 <div class="col-xs-12 text-center">
                      <img src="images/satisfied.gif" class="animations">
                 </div>
-            </div>
-            <div class="col-xs-10 col-xs-offset-1 text-center">
-                <div class="button-next">next</div>
             </div>
         </div>
     <!---section-->
@@ -109,16 +104,10 @@
         <div class="row center-container">
             <div class="container-feeling-three">
                 <div class="col-xs-12 text-center">
-                    <p>Unique</p>
-                </div>
-                <div class="col-xs-12 text-center">
                      <img src="images/unique.gif" class="animations">
                 </div>
             </div>
             <div class="container-feeling-four">
-                <div class="col-xs-12 col-md-12 text-center">
-                    <p>Peaceful</p>
-                </div>
                 <div class="col-xs-12 text-center">
                      <img src="images/peacful.gif" class="animations">
                 </div>
@@ -129,7 +118,7 @@
 
         <div class="row button-section-3">
             <div class="col-xs-12 text-center">
-                <h2 class="happy-copy-section-3">Almost done!<h2>
+                <h2 class="happy-copy-section-3">Okay! You're almost done!<h2>
             </div>
             <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-4 text-center">
                 <div class="button" id="btn-feeling-five">Lucky</div>
@@ -142,14 +131,10 @@
         <div class="row center-container">
             <div class="container-feeling-five">
                 <div class="col-xs-12 text-center">
-                    <p>Lucky text</p>
                     <img src="images/lucky.gif" class="animations">
                 </div>
             </div>
             <div class="container-feeling-six">
-                <div class="col-xs-12 col-md-12 text-center">
-                    <p>Free text</p>
-                </div>
                 <div class="col-xs-12 text-center">
                      <img src="images/free.gif" class="animations">
                 </div>
@@ -160,7 +145,7 @@
 
         <div class="row button-section-4">
             <div class="col-xs-12 text-center">
-                <h2 class="happy-copy-section-4">Last one<h2>
+                <h2 class="happy-copy-section-4">Cool! Choose between these two emotions!<h2>
             </div>
             <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-4 text-center">
                 <div class="button" id="btn-feeling-seven">Confident</div>
@@ -173,13 +158,11 @@
         <div class="row center-container">
             <div class="container-feeling-seven">
                 <div class="col-xs-12 text-center">
-                    <p>Confident</p>
                     <img src="images/confident.gif" class="animations">
                 </div>
             </div>
             <div class="container-feeling-eight">
                 <div class="col-xs-12 col-md-12 text-center">
-                    <p>Dynamic</p>
                 </div>
                 <div class="col-xs-12 text-center">
                      <img src="images/dynamic.gif" class="animations">
@@ -187,11 +170,15 @@
             </div>
         </div>
 
-        <div class="row container-loading-artwork">
-            <div class="col-xs-12 loader"></div>
+        <div class="center-container container-loading-artwork">
+            <div class="loader"></div>
+            <p class="loder-text text-center">Wait a few seconds! we are creating your artwork</p>
         </div>
 
-        <div class="row artwork-container-happy"> 
+        <div class="row text-center" id="artwork-container-happy"> 
+            <div class="col-xs-12">
+                <h2>Your artwork is done!</h2>
+            </div>
             <div class="col-xs-12 text-center">
                 <img src="" id="art-work-happy">
             </div>
@@ -205,7 +192,7 @@
 
 
 
-    <!--SAD VIEW--><!--SAD VIEW--><!--SAD VIEW--><!--SAD VIEW--><!--SAD VIEW--><!--SAD VIEW--><!--SAD VIEW--><!--SAD VIEW--><!--SAD VIEW--><!--SAD VIEW-->
+    <!--SAD VIEW-->
 
     <div class="container-sad-viwe">
         <div class="row gif-section welcome-section center-container">
@@ -217,7 +204,7 @@
 
         <div class="row button-section-1-sad">
             <div class="col-xs-12 text-center">
-                <h2 class="feeling-copy-section-1">Do yo feel like this or that?<h2>
+                <h2 class="feeling-copy-section-1">Here we go! Do you feel empty or depressed?<h2>
             </div>
             <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3 text-center">
                 <div class="button-sad" id="btn-feeling-one-sad">Empty</div>
@@ -230,7 +217,6 @@
         <div class="row center-container">
             <div class="container-feeling-one-sad">
                 <div class="col-xs-12 text-center">
-                    <p>Empty</p>
                     <img src="images/empty.gif" class="animations">
                 </div>
             </div>
@@ -244,7 +230,7 @@
 
         <div class="row button-section-2-sad">
            <div class="col-xs-12 text-center">
-                <h2 class="feeling-copy-section-2">Or this?<h2>
+                <h2 class="feeling-copy-section-2">Choose between these feelings now!<h2>
             </div>
             <div class="col-xs-10 col-xs-offset-1  col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-4 text-center">
                 <div class="button-sad" id="btn-feeling-three-sad">Bad</div>
@@ -257,13 +243,11 @@
         <div class="row center-container">
             <div class="container-feeling-three-sad">
                 <div class="col-xs-12 text-center">
-                    <p>Bad</p>
                      <img src="images/bad.gif" class="animations">
                 </div>
             </div>
             <div class="container-feeling-four-sad">
                 <div class="col-xs-12 col-md-12 text-center">
-                    <p>Paralyzed</p>
                     <img src="images/paralyzed.gif" class="animations">
                 </div>
             </div>
@@ -273,7 +257,7 @@
 
         <div class="row button-section-3-sad">
             <div class="col-xs-12 text-center">
-                <h2 class="feeling-copy-section-3">How abot this feelings?<h2>
+                <h2 class="feeling-copy-section-3">Sorry that you feel this way!<h2>
             </div>
             <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-4 text-center">
                 <div class="button-sad" id="btn-feeling-five-sad">Anxious</div>
@@ -286,13 +270,11 @@
         <div class="row center-container">
             <div class="container-feeling-five-sad">
                 <div class="col-xs-12 text-center">
-                    <p>Anxious</p>
                     <img src="images/anxious.gif" class="animations">
                 </div>
             </div>
             <div class="container-feeling-six-sad">
                 <div class="col-xs-12 col-md-12 text-center">
-                    <p>Heartbroken</p>
                     <img src="images/heartbroaken.gif" class="animations">
                 </div>
             </div>
@@ -302,7 +284,7 @@
 
         <div class="row button-section-4-sad">
             <div class="col-xs-12 text-center">
-                <h2 class="feeling-copy-section-4">Last one now!<h2>
+                <h2 class="feeling-copy-section-4">Just so you know it's okay to be sad! last step now!<h2>
             </div>
             <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-4 text-center">
                 <div class="button-sad" id="btn-feeling-seven-sad">Panic</div>
@@ -315,19 +297,21 @@
         <div class="row center-container">
             <div class="container-feeling-seven-sad">
                 <div class="col-xs-12 text-center">
-                    <p>Panic</p>
                     <img src="images/panic.gif" class="animations">
                 </div>
             </div>
             <div class="container-feeling-eight-sad">
                 <div class="col-xs-12 col-md-12 text-center">
                     <img src="images/rejected.gif" class="animations">
-                    <p>Rejected</p>
                 </div>
             </div>
         </div>
+
         
-        <div class="row artwork-container-sad text-center">    
+        <div class="row text-center" id="artwork-container-sad">  
+            <div class="col-xs-12">
+                <h2>Your artwork is done!</h2>
+            </div>
             <div class="col-xs-12">
                 <img src="" id="art-work-sad">
             </div>

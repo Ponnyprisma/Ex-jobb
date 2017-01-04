@@ -21,9 +21,10 @@
 }
 
 .about-me-text {
-	
-color: $color-hotpink;
-	@include for-phone-only {
+	font-family: 'AvenirNext-Bold';
+	color: $color-hotpink;
+		
+		@include for-phone-only {
 		text-align: center;
 	}
 }

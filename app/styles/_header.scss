@@ -1,7 +1,6 @@
 .header {
 	width: 100%;
 	margin-bottom: $grid-gutter-width;
-
 }
 
 ul {
@@ -9,26 +8,27 @@ ul {
 
 	li {
 		display: inline-block;
-		font-family: 'SofiaProBlack';
+		font-family: 'AvenirNext-Bold';
 		font-size: 14px;
-
+		 @include for-phone-only {
+		 	font-size: 11px;
+		 }
 
 		a {
 			text-decoration: none;
 			color: $color-white;
 			padding: $grid-gutter-width/2;
 			position: relative;
+			@include for-phone-only {
+				padding: $grid-gutter-width/4;
+			}
 
 			&:hover {
 				text-decoration: none;
 				color: $color-hotpink;
-				//color: $color-purple;
 			}
 
-			
-
 			&:before {
-
 				content: "";
 				position: absolute;
 				width: 100%;
@@ -49,8 +49,7 @@ ul {
 				-webkit-transform: scaleX(1);
 				transform: scaleX(1);
 				color: $color-white;
-			}
-			
+			}	
 		}
 	}
 }

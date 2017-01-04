@@ -13,7 +13,6 @@ $fa-font-path: "/bower_components/font-awesome/fonts/";
 @import "buttons";
 @import "main-content";
 @import "verticle-text";
-@import "form";
 @import "artwork";
 @import "aboutme";
 // endbower
@@ -29,7 +28,10 @@ body {
   user-select: none;
   margin: 0;
   height: 100%;
-  background-color: $color-blue-grey;
+  background-color: $color-black;
+  background-image: url(../images/brus.gif);
+  background-size: cover;
+
 }
 
 html {
@@ -42,35 +44,40 @@ html, body {
 }
 
 h1 {
-  font-family: 'SofiaProBlack';
+  font-family: 'AvenirNext-Bold';
   font-size: 50px;
   color: $color-purple;
-  //display: none;
 }
 
 h2 {
-  font-family: 'SofiaProBlack';
+  font-family: 'AvenirNext-Bold';
   font-size: 40px;
   color: $color-white;
+  @include for-phone-only {
+    font-size: 26px;
+  }
 }
 
 p {
-  font-family: 'SofiaProBlack';
+  font-family: 'AvenirNext-DemiBold';
   color: $color-white;
+  font-size: 14px;
 }
-.how-do-you-feel {
+
+#how-do-you-feel {
   color: $color-white;
+  font-size: 60px;
+  font-family: 'AvenirNext-DemiBold';
 
   @include for-phone-only {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+
+
+
 /*
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
@@ -87,5 +94,3 @@ p {
 @import "aboutme";
 
 */
-
-

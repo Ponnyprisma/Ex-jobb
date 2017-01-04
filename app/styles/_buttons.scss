@@ -3,7 +3,7 @@
 	padding: 10px;
 	transition: all .1s ease-in-out;
 	color: white;
-	font-family: 'SofiaProBlack';
+	font-family: 'AvenirNext-Bold';
 	font-size: 20px;
 	cursor: pointer;
 }
@@ -114,21 +114,46 @@
   transform: translate(0, -50%);
 
 	#sad-smiley-btn, #happy-smiley-btn {
+		margin-bottom: $grid-gutter-width;
 		font-size: 80px;
 		cursor: pointer;
 		color: $color-white;
 		transition: all .1s ease-in-out;
 
-
 		&:hover {
 			color: $color-hotpink;
-
 		}
 	}
+}
 
+#sad-smiley-btn {
+	@include for-desktop-up {
+		margin-right: 100px;
+	}
+	@include for-tablet-portrait-up {
+		margin-right: 100px;
+	}
+}
+
+#happy-smiley-btn {
+	@include for-desktop-up {
+		margin-left: 80px;
+	}
+
+	@include for-tablet-portrait-up {
+		margin-left: 80px;
+	}
 }
 
 
+#next-btn {
+	color: $color-white;
+	font-size: 40px;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	cursor: pointer;
+}
 
 
 @keyframes shake {

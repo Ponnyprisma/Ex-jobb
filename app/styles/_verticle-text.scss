@@ -1,6 +1,4 @@
-
 #vertical-text-1 {
-
   left: 0;
   top: $grid-gutter-width*4;
   color: $color-hotpink;
@@ -15,8 +13,7 @@
 #vertical-text-2, #vertical-text-1 {
   position: absolute;
   transform: rotate(90deg);
-  font-family: 'SofiaProBlack';
-
+  font-family: 'AvenirNext-Bold';
 }
 
 
@@ -37,7 +34,6 @@
   font-size: 34px;
   padding-right: $grid-gutter-width;
   color: $color-white;
-
 }
 
 #logo-happy-heart {
