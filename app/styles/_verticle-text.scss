@@ -63,15 +63,33 @@ button#playpausebtn {
     background: $color-purple;
     background-size: cover;
     z-index: 10;
+
+    h2 {
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      position: absolute;
+      top: 20%;
+      left: 0;
+      right: 0;
+    }
 }
 
 .close-popup {
   position: absolute;
-  top: 10%;
-  left: 0;
+  top: $grid-gutter-width;
+  left: 90%;
   right: 0;
   color: $color-hotpink;
 
+}
+
+.wikitext {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
 }
   
 /*

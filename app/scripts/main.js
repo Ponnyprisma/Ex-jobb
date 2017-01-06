@@ -5,6 +5,47 @@ console.log('\'Allo \'Allo!');
 
 $( document ).ready(function() {
 
+	$(document).ready(function(){
+ 
+    $.ajax({
+        type: "GET",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Positive_psychology&callback=?",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        dataType: "json",
+        success: function (data, textStatus, jqXHR) {
+ 
+            var markup = data.parse.text["*"];
+            var blurb = $('<div></div>').html(markup);
+ 
+            // remove links as they will not work
+            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+ 
+            // remove any references
+            blurb.find('sup').remove();
+ 
+            // remove cite error
+            blurb.find('.mw-ext-cite-error').remove();
+            $('.wikitext').html($(blurb).find('p'));
+
+
+ 
+        },
+        error: function (errorMessage) {
+        }
+    });
+});
+/*
+var wikiSad = ['http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Positive_psychology&callback=?','http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Sadness&callback=?'];
+var randomWikiSad = Math.floor(Math.random() * wikiSad.length);
+
+
+for (var i = 0; i < wikiSad.length; i++) {
+	console.log(wikiSad[randomWikiSad]);
+}
+
+*/
+
 
 var artWorkSad = ['images/quiz.jpg', 'images/rednails.jpg', 'images/sea.jpg', 'images/winter.jpg', 'images/dust.jpg'];
 var randomSad = Math.floor(Math.random() * artWorkSad.length);
