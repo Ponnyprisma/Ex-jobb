@@ -15,7 +15,7 @@
 	box-sizing: border-box;
 	border: 2px solid $color-white;
 
-		&:hover {
+		&:hover, &:active {
 		
 		background-color: $color-purple;
 		color: $color-white;
@@ -32,7 +32,7 @@
 	box-sizing: border-box;
 	border: 2px solid $color-white;
 
-		&:hover {
+		&:hover, &:active {
 		
 		background-color: $color-lightgrey;
 		color: $color-black;
@@ -145,15 +145,6 @@
 	}
 }
 
-
-#next-btn {
-	color: $color-white;
-	font-size: 40px;
-	position: absolute;
-	bottom: 30px;
-	left: 50%;
-	cursor: pointer;
-}
 
 
 @keyframes shake {

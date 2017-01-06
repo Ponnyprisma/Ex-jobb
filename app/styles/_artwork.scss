@@ -22,19 +22,23 @@
 	display: none;
 
 	h2 {
-		margin-bottom: $grid-gutter-width;
+		//margin-bottom: $grid-gutter-width;
 		@include for-phone-only {
 			font-size: 20px;
 			margin-top: 0px;
 		}
 	}
+
+	p {
+		margin-bottom: $grid-gutter-width;
+	}
 	
 	@include for-desktop-up {
-		margin-top: $grid-gutter-width*3;
+		margin-top: $grid-gutter-width;
 	}
 
 	@include for-tablet-portrait-up {
-		margin-top: $grid-gutter-width*3;
+		margin-top: $grid-gutter-width;
 	}
 
 	@include for-phone-only {
