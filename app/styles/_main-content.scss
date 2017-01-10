@@ -1,3 +1,59 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  margin: 0;
+  height: 100%;
+  background-color: $color-black;
+  background-image: url(../images/brus.gif);
+  background-size: cover;
+
+}
+
+html {
+  height: 100%;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'AvenirNext-Bold';
+  font-size: 50px;
+  color: $color-purple;
+}
+
+h2 {
+  font-family: 'AvenirNext-Bold';
+  font-size: 40px;
+  color: $color-white;
+  @include for-phone-only {
+    font-size: 26px;
+  }
+}
+
+p {
+  font-family: 'AvenirNext-DemiBold';
+  color: $color-white;
+  font-size: 14px;
+}
+
+#how-do-you-feel {
+  color: $color-white;
+  font-size: 60px;
+  font-family: 'AvenirNext-DemiBold';
+
+  @include for-phone-only {
+    font-size: 26px;
+  }
+}
+
 //Happy containers
 
 .feeling-copy-section-1, .feeling-copy-section-2, .feeling-copy-section-3, .feeling-copy-section-4 {

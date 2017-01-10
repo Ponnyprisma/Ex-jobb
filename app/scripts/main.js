@@ -44,8 +44,40 @@ for (var i = 0; i < wikiSad.length; i++) {
 	console.log(wikiSad[randomWikiSad]);
 }
 
-*/
 
+var enthusiastic =[];
+var satisfied =[];
+var unique = [];
+var peacful = [];
+var lucky = [];
+var free = [];
+var confident = [];
+var dynamic = [];
+
+var Empty =[];
+var depressed =[];
+var bad = [];
+var paralyzed = [];
+var anxious = [];
+var heartbroken = [];
+var panic = [];
+var rejected = [];
+
+var artWorkSad =
+var artworkHappy =
+
+function randomSad () {
+	// lyssnar om en knapp är tryckt 
+}
+
+function randomHappy () {
+	//lyssnar om en knapp är tryckt 
+}
+
+// plockar in variablar i en ny arry med arry push
+
+
+*/
 
 var artWorkSad = ['images/quiz.jpg', 'images/rednails.jpg', 'images/sea.jpg', 'images/winter.jpg', 'images/dust.jpg'];
 var randomSad = Math.floor(Math.random() * artWorkSad.length);
