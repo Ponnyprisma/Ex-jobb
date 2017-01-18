@@ -6,12 +6,7 @@
 	font-family: 'AvenirNext-Bold';
 	font-size: 20px;
 	cursor: pointer;
-}
-
-
-.button {
 	margin-bottom: $grid-gutter-width;
-	transition: all .1s ease-in-out;
 	box-sizing: border-box;
 	border: 2px solid $color-white;
 
@@ -26,103 +21,36 @@
 	}
 }
 
-.button-sad {
+
+.button-container, .container-first-step {
+	-webkit-transform: translate(0, -50%);
+  	transform: translate(0, -50%);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	display: none;
+}
+
+#step-one {
+	-webkit-transform: translate(0, -50%);
+  	transform: translate(0, -50%);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+}
+
+
+#sad-smiley-btn, #happy-smiley-btn {
 	margin-bottom: $grid-gutter-width;
+	font-size: 80px;
+	cursor: pointer;
+	color: $color-white;
 	transition: all .1s ease-in-out;
-	box-sizing: border-box;
-	border: 2px solid $color-white;
 
-		&:hover, &:active {
-		
-		background-color: $color-lightgrey;
-		color: $color-black;
-		animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  		transform: translate3d(0, 0, 0);
-  		backface-visibility: hidden;
-  		border: 2px solid $color-lightgrey;
-	}
-}
-//bts happy
-#btn-feeling-one, #btn-feeling-two {
-	margin-bottom: $grid-gutter-width;
-	display: none;
-}
-
-#btn-feeling-three, #btn-feeling-four {
-	margin-bottom: $grid-gutter-width;
-	display: none;
-}
-
-#btn-feeling-five, #btn-feeling-six {
-	margin-bottom: $grid-gutter-width;
-	display: none;
-}
-
-#btn-feeling-seven, #btn-feeling-eight {
-	margin-bottom: $grid-gutter-width;
-	display: none;
-
-}
-//btns sad
-#btn-feeling-one-sad, #btn-feeling-two-sad {
-	margin-bottom: $grid-gutter-width;
-	display: none;
-}
-
-#btn-feeling-three-sad, #btn-feeling-four-sad {
-	margin-bottom: $grid-gutter-width;
-	display: none;
-}
-
-#btn-feeling-five-sad, #btn-feeling-six-sad {
-	margin-bottom: $grid-gutter-width;
-	display: none;
-}
-
-#btn-feeling-seven-sad, #btn-feeling-eight-sad {
-	margin-bottom: $grid-gutter-width;
-	display: none;
-
-}
-
-
-.button-section-1, .button-section-2, .button-section-3, .button-section-4  {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	right: 0;
-	-webkit-transform: translate(0, -50%);
-  	transform: translate(0, -50%);
-}
-
-.button-section-1-sad, .button-section-2-sad, .button-section-3-sad, .button-section-4-sad  {
-	-webkit-transform: translate(0, -50%);
-  	transform: translate(0, -50%);
-	position: absolute;
-	top: 50%;
-	left: 0;
-	right: 0;
-}
-
-
-.container-first-step {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-
-	#sad-smiley-btn, #happy-smiley-btn {
-		margin-bottom: $grid-gutter-width;
-		font-size: 80px;
-		cursor: pointer;
-		color: $color-white;
-		transition: all .1s ease-in-out;
-
-		&:hover {
-			color: $color-hotpink;
-		}
+	&:hover {
+		color: $color-hotpink;
 	}
 }
 
@@ -144,8 +72,6 @@
 		margin-left: 80px;
 	}
 }
-
-
 
 @keyframes shake {
   10%, 90% {

@@ -1,41 +1,31 @@
 $icon-font-path: '../fonts/';
 $fa-font-path: "/bower_components/font-awesome/fonts/";
 
-
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/font-awesome/scss/font-awesome.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss",
+"queries",
+"variables",
+"header",
+"animation",
+"buttons",
+"main-content",
+"verticle-text",
+"artwork",
+"aboutme";
 // endbower
 
 
-
-
-
-
-
-
 /*
-#play-music, #stop-music {
-  font-size: 30px;
-  cursor: pointer;
-}
 
-*/
-
-
-
-/*
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/font-awesome/scss/font-awesome.scss";
-@import url('https://fonts.googleapis.com/css?family=Nova+Mono|Shrikhand|Yatra+One&subset=greek,gujarati,latin-ext');
-@import "queries";
-@import "variables";
-@import "header";
-@import "animation";
-@import "buttons";
-@import "main-content";
-@import "verticle-text";
-@import "artwork";
-@import "aboutme";
+"queries",
+"variables",
+"header",
+"animation",
+"buttons",
+"main-content",
+"verticle-text",
+"artwork",
+"aboutme";
 
 */

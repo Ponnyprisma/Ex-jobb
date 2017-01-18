@@ -1,11 +1,4 @@
-console.log('\'Allo \'Allo!');
-
-
-
-
-$( document ).ready(function() {
-
-	$(document).ready(function(){
+$(document).ready(function(){
  
     $.ajax({
         type: "GET",
@@ -17,7 +10,7 @@ $( document ).ready(function() {
  
             var markup = data.parse.text["*"];
             var blurb = $('<div></div>').html(markup);
- 
+
             // remove links as they will not work
             blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
  
@@ -27,85 +20,35 @@ $( document ).ready(function() {
             // remove cite error
             blurb.find('.mw-ext-cite-error').remove();
             $('.wikitext').html($(blurb).find('p'));
-
-
- 
         },
         error: function (errorMessage) {
         }
     });
-});
-/*
-var wikiSad = ['http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Positive_psychology&callback=?','http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Sadness&callback=?'];
-var randomWikiSad = Math.floor(Math.random() * wikiSad.length);
-
-
-for (var i = 0; i < wikiSad.length; i++) {
-	console.log(wikiSad[randomWikiSad]);
-}
-
-
-var enthusiastic =[];
-var satisfied =[];
-var unique = [];
-var peacful = [];
-var lucky = [];
-var free = [];
-var confident = [];
-var dynamic = [];
-
-var Empty =[];
-var depressed =[];
-var bad = [];
-var paralyzed = [];
-var anxious = [];
-var heartbroken = [];
-var panic = [];
-var rejected = [];
-
-var artWorkSad =
-var artworkHappy =
-
-function randomSad () {
-	// lyssnar om en knapp är tryckt 
-}
-
-function randomHappy () {
-	//lyssnar om en knapp är tryckt 
-}
-
-// plockar in variablar i en ny arry med arry push
-
-
-*/
 
 var artWorkSad = ['images/quiz.jpg', 'images/rednails.jpg', 'images/sea.jpg', 'images/winter.jpg', 'images/dust.jpg'];
 var randomSad = Math.floor(Math.random() * artWorkSad.length);
 console.log(artWorkSad);
-
-for (var i = 0; i < artWorkSad.length; i++) {
-	
-	document.getElementById('art-work-sad').src = artWorkSad[randomSad];
-	console.log(artWorkSad[randomSad]);
-
+//Loopar igenom de ledsna konstverken
+function displayArtworkSad () {
+	for (var i = 0; i < artWorkSad.length; i++) {
+		document.getElementById('art-work-sad').src = artWorkSad[randomSad];
+		console.log(artWorkSad[randomSad]);
+	}
 }
 
 var artWorkHappy = ['images/coral.jpg', 'images/feather.jpg', 'images/minimal.jpg', 'images/skulpture.jpg', 'images/purple.jpg'];
 var randomHappy = Math.floor(Math.random() * artWorkHappy.length);
 console.log(artWorkHappy);
 
-
-for (var i = 0; i < artWorkHappy.length; i++) {
-	
-	document.getElementById('art-work-happy').src = artWorkHappy[randomHappy];
-	console.log(artWorkHappy[randomHappy]);
-
+//Loopar igenom de glada konstverken
+function displayArtworkHappy () {
+	for (var i = 0; i < artWorkHappy.length; i++) {
+		document.getElementById('art-work-happy').src = artWorkHappy[randomHappy];
+		console.log(artWorkHappy[randomHappy]);
+	}
 }
 
 //ljud
-
-
-
 var audio, playbtn, seek_bar;
 
 function initAudioPlayerHappy () {
@@ -114,12 +57,9 @@ function initAudioPlayerHappy () {
 	audio.loop = true;
 	audio.play();
 	playbtn = document.getElementById('playpausebtn');
-	//mutebtn = document.getElementById('mutebtn');
 	playbtn.addEventListener("click", playPause);
-	//mutebtn.addEventListener("click", mute);
 
 }
-
 
 function initAudioPlayer () {
 	audio = new Audio();
@@ -127,10 +67,7 @@ function initAudioPlayer () {
 	audio.loop = true;
 	audio.play();
 	playbtn = document.getElementById('playpausebtn');
-	//mutebtn = document.getElementById('mutebtn');
 	playbtn.addEventListener("click", playPause);
-	//mutebtn.addEventListener("click", mute);
-
 }
 
 function playPause () {
@@ -142,8 +79,6 @@ function playPause () {
 		playbtn.style.background = "url(../images/play.svg) no-repeat";
 	}
 }
-
-
 
 //skapar nerladdningslänk till de glada konstverken
 var artworkLinkHappy = document.createElement('a');
@@ -207,7 +142,6 @@ function titleSadArtWork () {
 			artworkTextSadFacts.textContent = 'dust';
 			console.log('dust');
 	}
-
 }
 
 function titleHappyArtWork () {
@@ -233,35 +167,22 @@ function titleHappyArtWork () {
 			artworkTextHappyFacts.textContent = 'purple';
 			console.log('purple');
 	}
-
 }
 
-
-
 //////////////////////////////HAPPY FLOW//////////////////////////////////////////////
-	
 	$('#sad-smiley-btn').on('click', function() {
 		$('#btn-feeling-one-sad').show();
 		$('#btn-feeling-two-sad').show();
 		$('.feeling-copy-section-1').fadeIn(2000);
-		$('#happy-smiley-btn').hide();
-		$('#sad-smiley-btn').hide();
-		//$('body').addClass('sadBackground');
-		//$('#vertical-text-2').css("background", "url(images/sadandhappy-sad.svg) no-repeat");  
-		//$('.fly-in-text').hide();
-		$('#how-do-you-feel').hide();
-		$('.explanation-text').hide();
+		$('.container-first-step').hide();
 		$('#playpausebtn').show();
 
-
 		$('#logo-happy-heart').mouseover(function() {
-        	$('#logo-happy-heart').css("background", "url(../images/heart-sad.svg) no-repeat");  
-        	
+        	$('#logo-happy-heart').css("background", "url(../images/heart-sad.svg) no-repeat");  	
     	});
 
     	$('#logo-happy-heart').mouseleave(function() {
-        	$('#logo-happy-heart').css("background", "url(../images/heart.svg) no-repeat");  
-        	
+        	$('#logo-happy-heart').css("background", "url(../images/heart.svg) no-repeat");  	
     	});
 
 		initAudioPlayer();
@@ -273,7 +194,6 @@ function titleHappyArtWork () {
 
 	$('.close-popup').on('click', function() {
 		$('.information-popup').fadeOut(1000);
-
 	});
 
 
@@ -357,7 +277,6 @@ function titleHappyArtWork () {
 		setTimeout(function() {
 			$('.container-feeling-seven-sad').hide()
      		$('.container-loading-artwork').show();
-     		//$('.text-rendering-arwork').show();
 
      		setTimeout(function() {
      			$('.container-loading-artwork').hide();
@@ -366,6 +285,7 @@ function titleHappyArtWork () {
      			$('#download-btn-container-sad').show();
      		}, 3000); //loding artwork göms efter  3 sekunder och visar sedan konsverket
      	}, 7000); // animationen visas i 1 sekund
+     	displayArtworkSad ();
      	titleSadArtWork ();
 	});
 
@@ -376,7 +296,6 @@ function titleHappyArtWork () {
 		setTimeout(function() {
 			$('.container-feeling-eight-sad').hide()
      		$('.container-loading-artwork').show();
-     		//$('.text-rendering-arwork').show();
 
      		setTimeout(function() {
      			$('.container-loading-artwork').hide();
@@ -385,26 +304,15 @@ function titleHappyArtWork () {
      			$('#download-btn-container-sad').show();
      		}, 3000); //loding artwork göms efter  3 sekunder och visar sedan konsverket
  		}, 7000); // animationen visas i 1 sekund
+ 		displayArtworkSad ();
  		titleSadArtWork ();
 	});
 
 //////////////////////////////HAPPY FLOW//////////////////////////////////////////////
-
-
-
-
 	$('#happy-smiley-btn').on('click', function() {
-		
 		$('#btn-feeling-one').show();
 		$('#btn-feeling-two').show();
-		$('#happy-smiley-btn').hide();
-		$('#sad-smiley-btn').hide();
-		//$('body').addClass('happyBackground');
-		//$('.fly-in-text').hide();
-		//$('#logo-happy-heart').css("background", "url(../images/heart-happy.svg)");  
-		//$('#vertical-text-2').css("background", "url(images/sadandhappy-happy.svg) no-repeat");  
-		$('#how-do-you-feel').hide();
-		$('.explanation-text').hide();
+		$('.container-first-step').hide();
 		$('.happy-copy-section-1').fadeIn(2000);
 		$('#playpausebtn').show();
 
@@ -415,12 +323,10 @@ function titleHappyArtWork () {
     	$('#logo-happy-heart').mouseleave(function() {
         	$('#logo-happy-heart').css("background", "url(../images/heart.svg)");  
     	});
-
 		initAudioPlayerHappy();
 	});
 
 	$('#btn-feeling-one').on('click', function() {
-	
 		$('.container-feeling-one').show();
 		$('.button-section-1').hide();
 		
@@ -511,8 +417,8 @@ function titleHappyArtWork () {
      			$('#artwork-container-happy').fadeIn(3000);
      			$('#download-btn-container-happy').show();
      		}, 3000); //loding artwork göms efter  6 sekunder och visar sedan konsverket
- 	
      	}, 7000); // animationen visas i 1 sekund
+     	displayArtworkHappy ();
      	titleHappyArtWork ();
 	});
 
@@ -523,7 +429,6 @@ function titleHappyArtWork () {
      	setTimeout(function() {
 			$('.container-feeling-eight').hide()
      		$('.container-loading-artwork').show();
-     		//$('.text-rendering-arwork').show();
 
      		setTimeout(function() {
      			$('.container-loading-artwork').hide();
@@ -532,38 +437,7 @@ function titleHappyArtWork () {
      			$('#download-btn-container-happy').show();
      		}, 3000); //loding artwork göms efter  6 sekunder och visar sedan konsverket
  		}, 7000); // animationen visas i 1 sekund
+ 		displayArtworkHappy ();
  		titleHappyArtWork ();
  	});
-
-
-		/*
-			gammal groll innan renderfunktionen
-		 setTimeout(function() {
-     		$('.container-feeling-seven').hide(); 
-     		$('.artwork-container-happy').show();  
-     		$('#download-btn-container-happy').show();
-  		}, 1000);
-  		$('body').addClass('animation');
-		*/
-
-		/*
-	setTimeout(function(){
-  		$('.fly-in-text').removeClass('hide-text');
-  	}, 500);
-
-  	/*
-function mute () {
-	if (audio.muted) {
-		audio.muted = false;
-		mutebtn.style.background = "url(../images/speaker.svg) no-repeat";
-	} else {
-		audio.muted = true;
-		mutebtn.style.background = "url(../images/speaker_muted.svg) no-repeat";
-	}
-
-}
-*/
-//window.addEventListener("load", initAudioPlayer);
-
-
 });

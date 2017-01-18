@@ -35,6 +35,7 @@
   right: $grid-gutter-width;
   bottom: $grid-gutter-width;
   color: $color-hotpink;
+  cursor: pointer;
 }
 
 button#playpausebtn {
@@ -75,11 +76,13 @@ button#playpausebtn {
 }
 
 .close-popup {
+  height: 40px;
+  background: url(../images/close.svg) no-repeat;
   position: absolute;
-  top: $grid-gutter-width;
-  left: 90%;
   right: 0;
-  color: $color-hotpink;
+  left: 50%;
+  bottom: $grid-gutter-width;
+  cursor: pointer;
 
 }
 
