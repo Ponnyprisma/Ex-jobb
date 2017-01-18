@@ -1,48 +1,34 @@
-#art-work-happy, #art-work-sad {
-	
-	@include for-phone-only {
-		width: 200px;
-	}
+#canvas {
 
-	@include for-tablet-portrait-up {
-		width: 300px;
-	}
-
-	@include for-tablet-landscape-up {
-		width: 400px;
-	}
-
-	@include for-desktop-up {
-		width: 300px;
-	}
+  display: block;
+  margin: 0 auto;
+  margin-bottom: $grid-gutter-width;
 }
 
-#artwork-container-sad, #artwork-container-happy {
-
+.art-container {
 	display: none;
-
-	h2 {
-		//margin-bottom: $grid-gutter-width;
-		@include for-phone-only {
-			font-size: 20px;
-			margin-top: 0px;
-		}
-	}
-
-	p {
-		margin-bottom: $grid-gutter-width;
-	}
-	
 	@include for-desktop-up {
 		margin-top: $grid-gutter-width;
 	}
 
 	@include for-tablet-portrait-up {
-		margin-top: $grid-gutter-width;
+		margin-top: $grid-gutter-width*4;
 	}
 
 	@include for-phone-only {
 		margin-top: 0px;
+	}
+	
+	a {
+		color: $color-white;
+		font-family: 'AvenirNext-Bold';
+		cursor: pointer;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-hotpink;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -59,27 +45,3 @@
 		width: 900px;
 	}
 }
-
-
-#download-btn-container-happy, #download-btn-container-sad {
-	margin-top: $grid-gutter-width;
-	
-	a {
-		color: $color-white;
-		font-family: 'AvenirNext-Bold';
-		cursor: pointer;
-		text-decoration: none;
-
-		&:hover {
-			color: $color-hotpink;
-			text-decoration: none;
-		}
-	}
-}
-
-
-
-
-
-
-

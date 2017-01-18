@@ -2,12 +2,11 @@ $icon-font-path: '../fonts/';
 $fa-font-path: "/bower_components/font-awesome/fonts/";
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/font-awesome/scss/font-awesome.scss",
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss",
+"bower_components/font-awesome/scss/font-awesome.scss",
 "queries",
 "variables",
 "header",
-"animation",
 "buttons",
 "main-content",
 "verticle-text",
@@ -21,7 +20,6 @@ $fa-font-path: "/bower_components/font-awesome/fonts/";
 "queries",
 "variables",
 "header",
-"animation",
 "buttons",
 "main-content",
 "verticle-text",

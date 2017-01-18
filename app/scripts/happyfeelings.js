@@ -7,12 +7,12 @@ window.onload = function() {
     var context = canvas.getContext("2d");
     var initialized = false;
 	
-	canvas.width = 300;
-	canvas.height = 400;
+	canvas.width = 400;
+	canvas.height = 500;
     
     // Level properties
     var level = {
-        x: 10,
+        x: 150,
         y: 150,
         width: canvas.width,
         height: canvas.height
@@ -248,10 +248,6 @@ window.onload = function() {
         main(0);
     }
 
-
-
-
-
     // Get a random int between low and high, inclusive
     function randRange(low, high) {
         return Math.floor(low + Math.random()*(high-low+1));
@@ -315,7 +311,17 @@ window.onload = function() {
         context.fillStyle = "#e8eaec";
     }
 
-    
+
+    function downloadCanvas(link, canvasId, filename) {
+        link.href = document.getElementById('canvas').toDataURL();
+        link.download = filename;
+    }
+
+    document.getElementById('download').addEventListener('click', function() {
+        downloadCanvas(this, 'canvas', 'test.png');
+    }, false);
+
+
     
     // Call init to start the game
    
@@ -351,8 +357,40 @@ window.onload = function() {
     $('#btn-feeling-eight').on('click', function() {
         dynamicPic();
     });
-
 };
+
+    //ljud
+var audio, playbtn, seek_bar;
+
+function initAudioPlayerHappy () {
+    audio = new Audio();
+    audio.src = 'audio/The_Kyoto_Connection_-_01_-_Water.mp3';
+    audio.loop = true;
+    audio.play();
+    playbtn = document.getElementById('playpausebtn');
+    playbtn.addEventListener("click", playPause);
+
+}
+
+function initAudioPlayer () {
+    audio = new Audio();
+    audio.src = 'audio/simon_mathewson_-_13_-_Wunderkind.mp3';
+    audio.loop = true;
+    audio.play();
+    playbtn = document.getElementById('playpausebtn');
+    playbtn.addEventListener("click", playPause);
+}
+
+function playPause () {
+    if (audio.paused) {
+        audio.play();
+        playbtn.style.background = "url(../images/pause.svg) no-repeat";
+    } else {
+        audio.pause();
+        playbtn.style.background = "url(../images/play.svg) no-repeat";
+    }
+}
+
 
 
 
@@ -369,27 +407,20 @@ $('#happy-smiley-btn').on('click', function(){
 	$('#playpausebtn').show();
 	$('#step-one').hide();
 	$('#step-two').show();
-
-	$('#logo-happy-heart').mouseover(function() {
-        $('#logo-happy-heart').css("background", "url(../images/heart-happy.svg)");  
-    });
-
-    $('#logo-happy-heart').mouseleave(function() {
-        $('#logo-happy-heart').css("background", "url(../images/heart.svg)");  
-    });
-
+    initAudioPlayerHappy ();
 });
+
 //knapp 1
 $('#btn-feeling-one').on('click', function() {
 	$('.container-feeling-one').show();
 	$('#step-two').hide();
-		
 		setTimeout(function() {
      		$('.container-feeling-one').hide();  
      		$('#step-three').show();     
      		$('.headline-copy').fadeIn(2000);
  		}, 1000);
 });
+
 //knapp 2
 $('#btn-feeling-two').on('click', function() {
 	$('#step-two').hide();
@@ -456,7 +487,7 @@ $('#btn-feeling-seven').on('click', function() {
      		$('.headline-copy').fadeIn(2000);
      	setTimeout(function() {
      		$('#step-six').hide(); 
-			$('#artwork-container-happy').show();
+			$('.art-container').show();
      	}, 1000);
  	}, 7000);
 });
@@ -471,7 +502,7 @@ $('#btn-feeling-eight').on('click', function() {
      		$('.headline-copy').fadeIn(2000);
      	setTimeout(function() {
      		$('#step-six').hide(); 
-			$('#artwork-container-happy').show();
+			$('.art-container').show();
      	}, 1000);
  	}, 7000);
 
@@ -483,14 +514,7 @@ $('#sad-smiley-btn').on('click', function(){
 	$('#playpausebtn').show();
 	$('#step-two-sad').show();	
 	$('#step-one').hide();
-
-	$('#logo-happy-heart').mouseover(function() {
-        $('#logo-happy-heart').css("background", "url(../images/heart-sad.svg) no-repeat");  	
-    });
-
-    $('#logo-happy-heart').mouseleave(function() {
-        $('#logo-happy-heart').css("background", "url(../images/heart.svg) no-repeat");  	
-    });
+    initAudioPlayer();
 });
 
 //knapp ett
@@ -598,4 +622,27 @@ $('#btn-feeling-eight-sad').on('click', function() {
  	}, 7000);
 });
 
+
+
 });
+
+/*  
+
+    $('#logo-happy-heart').mouseover(function() {
+        $('#logo-happy-heart').css("background", "url(../images/heart-sad.svg) no-repeat");     
+    });
+
+    $('#logo-happy-heart').mouseleave(function() {
+        $('#logo-happy-heart').css("background", "url(../images/heart.svg) no-repeat");     
+    });
+
+
+
+
+$('#logo-happy-heart').mouseover(function() {
+        $('#logo-happy-heart').css("background", "url(../images/heart-happy.svg)");  
+    });
+
+    $('#logo-happy-heart').mouseleave(function() {
+        $('#logo-happy-heart').css("background", "url(../images/heart.svg)");  
+    });*/
