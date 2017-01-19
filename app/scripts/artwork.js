@@ -6,9 +6,9 @@ window.onload = function() {
     var canvas = document.getElementById("canvas"); 
     var context = canvas.getContext("2d");
     var initialized = false;
-	
-	canvas.width = 400;
-	canvas.height = 500;
+    
+    canvas.width = 400;
+    canvas.height = 500;
     
     // Level properties
     var level = {
@@ -53,9 +53,9 @@ window.onload = function() {
 
         // Load the images
     var loadedimages = [];
-   		 for (var i=0; i<imagefiles.length; i++) {
+         for (var i=0; i<imagefiles.length; i++) {
           // Create the image object
-     		var image = new Image();
+            var image = new Image();
             
             // Add onload event handler
             image.onload = function () {
@@ -81,10 +81,10 @@ window.onload = function() {
     function enthusiasticPic() {
         // Load images
         images = loadImages(["images/happyimages/enthusiastic1.png", "images/happyimages/enthusiastic2.png", "images/happyimages/enthusiastic3.png", "images/happyimages/enthusiastic4.png", "images/happyimages/enthusiastic5.png"]);
-  		
+        
        // Create random entities
        for (var i=0; i < 1; i++) {
-       		var random = Math.floor(Math.random() * images.length);
+            var random = Math.floor(Math.random() * images.length);
             var scale = randRange(150, 150);
             //var imageindex = i % images.length;
             var entity = new Entity(images[random], 0, 0, scale, scale,randRange(100, 100));
@@ -108,7 +108,7 @@ window.onload = function() {
         imagesSatisfied = loadImages(["images/happyimages/satisfied1.png", "images/happyimages/satisfied2.png", "images/happyimages/satisfied3.png"]);
 
        for (var i=0; i < 1; i++) {
-       		var random = Math.floor(Math.random() * imagesFree.length);
+            var random = Math.floor(Math.random() * imagesFree.length);
             var scale = randRange(150, 150);
             var entity = new Entity(imagesSatisfied[random], 0, 0, scale, scale,randRange(100, 100))
  
@@ -126,7 +126,7 @@ window.onload = function() {
         imagesUnique = loadImages(["images/happyimages/unique1.png", "images/happyimages/unique2.png", "images/happyimages/unique3.png", "images/happyimages/unique4.png", "images/happyimages/unique5.png"]);
 
        for (var i=0; i < 1; i++) {
-       		var random = Math.floor(Math.random() * imagesUnique.length);
+            var random = Math.floor(Math.random() * imagesUnique.length);
             var scale = randRange(150, 150);
             var entity = new Entity(imagesUnique[random], 0, 0, scale, scale,randRange(100, 100))
  
@@ -144,7 +144,7 @@ window.onload = function() {
         imagesPeaceful = loadImages(["images/happyimages/peaceful1.png", "images/happyimages/peaceful2.png", "images/happyimages/peaceful3.png", "images/happyimages/peaceful4.png", "images/happyimages/peaceful5.png", "images/happyimages/peaceful6.png"]);
 
        for (var i=0; i < 1; i++) {
-       		var random = Math.floor(Math.random() * imagesPeaceful.length);
+            var random = Math.floor(Math.random() * imagesPeaceful.length);
             var scale = randRange(150, 150);
             var entity = new Entity(imagesPeaceful[random], 0, 0, scale, scale,randRange(100, 100))
  
@@ -271,7 +271,7 @@ window.onload = function() {
                 // Add a delay for demonstration purposes
                 setTimeout(function(){initialized = true;}, 1000);
             }
-        	} else {
+            } else {
             // Update and render the game
             update(tframe);
             render();
@@ -327,15 +327,15 @@ window.onload = function() {
    
 
     $('#btn-feeling-one').on('click', function() {
-    	 enthusiasticPic();
+         enthusiasticPic();
     });
 
     $('#btn-feeling-two').on('click', function() {
-    	 satisfiedPic();
+         satisfiedPic();
     });
 
     $('#btn-feeling-three').on('click', function() {
-    	uniqePic();
+        uniqePic();
     });
 
      $('#btn-feeling-four').on('click', function() {
@@ -359,260 +359,4 @@ window.onload = function() {
     });
 };
 
-
-
-
-
-
-
-
-$('#happy-smiley-btn').on('click', function(){
-	$('#playpausebtn').show();
-	$('#step-one').hide();
-	$('#step-two').show();
 });
-
-//knapp 1
-$('#btn-feeling-one').on('click', function() {
-	$('.container-feeling-one').show();
-	$('#step-two').hide();//samma
-		setTimeout(function() {
-     		$('.container-feeling-one').hide();  
-     		$('#step-three').show();   //samma  
-     		$('.headline-copy').fadeIn(2000);
- 		}, 1000);
-});
-
-//knapp 2
-$('#btn-feeling-two').on('click', function() {
-	$('#step-two').hide();//samma
-	$('.container-feeling-two').show();
-
-		setTimeout(function() {
-     		$('.container-feeling-two').hide();  
-     		$('#step-three').show();   //samma  
-     		$('.headline-copy').fadeIn(2000);
- 		}, 1000);
-});
-//knapp 3
-$('#btn-feeling-three').on('click', function() {
-	$('#step-three').hide();
-	$('.container-feeling-three').show();
-
-	setTimeout(function() {
-			$('#step-four').show();
-     		$('.container-feeling-three').hide();       
-     		$('.headline-copy').fadeIn(2000);
- 		}, 1000);
-});
-//knapp 4
-$('#btn-feeling-four').on('click', function() {
-	$('#step-three').hide();
-	$('.container-feeling-four').show();
-
-	setTimeout(function() {
-			$('#step-four').show(); 
-     		$('.container-feeling-four').hide();      
-     		$('.headline-copy').fadeIn(2000);
- 	}, 1000);
-});
-//knapp 5
-$('#btn-feeling-five').on('click', function() {
-	$('.container-feeling-five').show();
-	$('#step-four').hide();
-
-	setTimeout(function() {
-			$('#step-five').show(); 
-     		$('.container-feeling-five').hide();      
-     		$('.headline-copy').fadeIn(2000);
- 	}, 1000);
-});
-//knapp 6
-$('#btn-feeling-six').on('click', function() {
-	$('.container-feeling-six').show();
-	$('#step-four').hide();
-
-	setTimeout(function() {
-			$('#step-five').show(); 
-     		$('.container-feeling-six').hide();      
-     		$('.headline-copy').fadeIn(2000);
- 	}, 1000);
-});
-//knapp sju
-$('#btn-feeling-seven').on('click', function() {
-	$('.container-feeling-seven').show();
-	$('#step-five').hide();
-
-	setTimeout(function() {
-			$('#step-six').show(); 
-     		$('.container-feeling-seven').hide();      
-     		$('.headline-copy').fadeIn(2000);
-     	setTimeout(function() {
-     		$('#step-six').hide(); 
-			$('.art-container').show();
-     	}, 1000);
- 	}, 7000);
-});
-//knapp åtta
-$('#btn-feeling-eight').on('click', function() {
-	$('#step-five').hide();
-	$('.container-feeling-eight').show();
-	
-	setTimeout(function() {
-			$('#step-six').show(); 
-     		$('.container-feeling-eight').hide();      
-     		$('.headline-copy').fadeIn(2000);
-     	setTimeout(function() {
-     		$('#step-six').hide(); 
-			$('.art-container').show();
-     	}, 1000);
- 	}, 7000);
-
-});
-
-///START SAD FLOW///
-
-$('#sad-smiley-btn').on('click', function(){
-	$('#playpausebtn').show();
-	$('#step-two-sad').show();	
-	$('#step-one').hide();
-});
-
-//knapp ett
-$('#btn-feeling-one-sad').on('click', function() {
-	$('#step-two-sad').hide();
-	$('.container-feeling-one-sad').show();
-
-	setTimeout(function() {
-			$('#step-three-sad').show(); 
-     		$('.container-feeling-one-sad').hide();      
-     		$('.headline-copy').fadeIn(2000);
- 	}, 1000);
-});
-
-//knapp två
-$('#btn-feeling-two-sad').on('click', function () {
-	$('#step-two-sad').hide();
-	$('.container-feeling-two-sad').show();
-
-	setTimeout(function() {
-			$('#step-three-sad').show(); 
-     		$('.container-feeling-two-sad').hide();      
-     		$('.headline-copy').fadeIn(2000);
- 	}, 1000);
-});
-
-//knapp tre
-$('#btn-feeling-three-sad').on('click', function () {
-	$('#step-three-sad').hide();
-	$('.container-feeling-three-sad').show();
-
-	setTimeout(function() {
-			$('#step-four-sad').show(); 
-     		$('.container-feeling-three-sad').hide();      
-     		$('.headline-copy').fadeIn(2000);
- 	}, 1000);
-});
-
-//knapp fyra
-
-$('#btn-feeling-four-sad').on('click', function () {
-	$('#step-three-sad').hide();
-	$('.container-feeling-four-sad').show();
-
-	setTimeout(function() {
-			$('#step-four-sad').show(); 
-     		$('.container-feeling-four-sad').hide();      
-     		$('.headline-copy').fadeIn(2000);
- 	}, 1000);
-});
-
-//knapp fem
-$('#btn-feeling-five-sad').on('click', function () {
-	$('#step-four-sad').hide();
-	$('.container-feeling-five-sad').show();
-
-	setTimeout(function() {
-			$('#step-five-sad').show(); 
-     		$('.container-feeling-five-sad').hide();      
-     		$('.headline-copy').fadeIn(2000);
- 	}, 1000);
-});
-
-//knapp sex
-$('#btn-feeling-six-sad').on('click', function () {
-	$('#step-four-sad').hide();
-	$('.container-feeling-six-sad').show();
-
-	setTimeout(function() {
-			$('#step-five-sad').show(); 
-     		$('.container-feeling-six-sad').hide();      
-     		$('.headline-copy').fadeIn(2000);
- 	}, 1000);
-});
-
-//knapp sju
-$('#btn-feeling-seven-sad').on('click', function() {
-	$('#step-five-sad').hide();
-	$('.container-feeling-seven-sad').show();
-
-	setTimeout(function() {
-			$('#step-six').show(); 
-     		$('.container-feeling-seven-sad').hide();      
-     		$('.headline-copy').fadeIn(2000);
-     	setTimeout(function() {
-     		$('#step-six').hide(); 
-			$('#artwork-container-happy').show();
-     	}, 3000);
- 	}, 7000);
-});
-
-//knapp åtta
-$('#btn-feeling-eight-sad').on('click', function() {
-	$('#step-five-sad').hide();
-	$('.container-feeling-eight-sad').show();
-	
-	setTimeout(function() {
-			$('#step-six').show(); 
-     		$('.container-feeling-eight-sad').hide();      
-     		$('.headline-copy').fadeIn(2000);
-     	setTimeout(function() {
-     		$('#step-six').hide(); 
-			$('#artwork-container-happy').show();
-     	}, 3000);
- 	}, 7000);
-});
-
-
-
-});
-
-/* 
-
-
-$('#logo-happy-heart').on('click', function() {
-    $('.information-popup').fadeIn(1000);
-});
-
-$('.close-popup').on('click', function() {
-    $('.information-popup').fadeOut(1000);
-}); 
-
-    $('#logo-happy-heart').mouseover(function() {
-        $('#logo-happy-heart').css("background", "url(../images/heart-sad.svg) no-repeat");     
-    });
-
-    $('#logo-happy-heart').mouseleave(function() {
-        $('#logo-happy-heart').css("background", "url(../images/heart.svg) no-repeat");     
-    });
-
-
-
-
-$('#logo-happy-heart').mouseover(function() {
-        $('#logo-happy-heart').css("background", "url(../images/heart-happy.svg)");  
-    });
-
-    $('#logo-happy-heart').mouseleave(function() {
-        $('#logo-happy-heart').css("background", "url(../images/heart.svg)");  
-    });*/
