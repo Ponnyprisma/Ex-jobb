@@ -39,7 +39,16 @@ window.onload = function() {
     var imagesLucky = [];
     var imagesConfident = [];
     var imagesDynamic = [];
-    
+
+    var imagesEmpty = [];
+    var imagesDepressed = [];
+    var imagesBad = [];
+    var imagesParalyzed = [];
+    var imagesAnxious = [];
+    var imagesHeartbroken = [];
+    var imagesPanic = [];
+    var imagesRejected = [];
+
     // Image loading global variables
     var loadcount = 0;
     var loadtotal = 0;
@@ -77,6 +86,151 @@ window.onload = function() {
         return loadedimages;
     }
 
+    function emptyPic() {
+
+        imagesEmpty = loadImages(["images/happyimages/empty1.png", "images/happyimages/empty2.png", "images/happyimages/empty3.png","images/happyimages/empty4.png", "images/happyimages/empty5.png"]);
+
+       for (var i=0; i < 1; i++) {
+            var random = Math.floor(Math.random() * imagesEmpty.length);
+            var scale = randRange(150, 150);
+            var entity = new Entity(imagesEmpty[random], 0, 0, scale, scale,randRange(100, 100))
+ 
+            entity.x = randRange(0, level.width-entity.width);
+            entity.y = randRange(0, level.height-entity.height);
+
+            entities.push(entity);
+        }
+
+        main(0);
+    }
+
+    function depressedPic() {
+
+        imagesDepressed = loadImages(["images/happyimages/depressed1.png", "images/happyimages/depressed2.png", "images/happyimages/depressed3.png","images/happyimages/depressed4.png", "images/happyimages/depressed5.png"]);
+
+       for (var i=0; i < 1; i++) {
+            var random = Math.floor(Math.random() * imagesDepressed.length);
+            var scale = randRange(150, 150);
+            var entity = new Entity(imagesDepressed[random], 0, 0, scale, scale,randRange(100, 100))
+ 
+            entity.x = randRange(0, level.width-entity.width);
+            entity.y = randRange(0, level.height-entity.height);
+
+            entities.push(entity);
+        }
+
+        main(0);
+    }
+
+
+    function badPic() {
+
+        imagesBad = loadImages(["images/happyimages/bad1.png", "images/happyimages/bad2.png", "images/happyimages/bad3.png","images/happyimages/bad4.png", "images/happyimages/bad5.png"]);
+
+       for (var i=0; i < 1; i++) {
+            var random = Math.floor(Math.random() * imagesBad.length);
+            var scale = randRange(150, 150);
+            var entity = new Entity(imagesBad[random], 0, 0, scale, scale,randRange(100, 100))
+ 
+            entity.x = randRange(0, level.width-entity.width);
+            entity.y = randRange(0, level.height-entity.height);
+
+            entities.push(entity);
+        }
+
+        main(0);
+    }
+
+    function paralyzedPic() {
+
+        imagesParalyzed = loadImages(["images/happyimages/paralyzed1.png", "images/happyimages/paralyzed2.png", "images/happyimages/paralyzed3.png","images/happyimages/paralyzed4.png", "images/happyimages/paralyzed5.png"]);
+
+       for (var i=0; i < 1; i++) {
+            var random = Math.floor(Math.random() * imagesParalyzed.length);
+            var scale = randRange(150, 150);
+            var entity = new Entity(imagesParalyzed[random], 0, 0, scale, scale,randRange(100, 100))
+ 
+            entity.x = randRange(0, level.width-entity.width);
+            entity.y = randRange(0, level.height-entity.height);
+
+            entities.push(entity);
+        }
+
+        main(0);
+    }
+
+    function anxiousPic() {
+
+        imagesAnxious = loadImages(["images/happyimages/anxious1.png", "images/happyimages/anxious2.png", "images/happyimages/anxious3.png","images/happyimages/anxious4.png", "images/happyimages/anxious5.png"]);
+
+       for (var i=0; i < 1; i++) {
+            var random = Math.floor(Math.random() * imagesAnxious.length);
+            var scale = randRange(150, 150);
+            var entity = new Entity(imagesAnxious[random], 0, 0, scale, scale,randRange(100, 100))
+ 
+            entity.x = randRange(0, level.width-entity.width);
+            entity.y = randRange(0, level.height-entity.height);
+
+            entities.push(entity);
+        }
+
+        main(0);
+    }
+
+    function heartbrokenPic() {
+
+        imagesHeartbroken = loadImages(["images/happyimages/heartbroken1.png", "images/happyimages/heartbroken2.png", "images/happyimages/heartbroken3.png","images/happyimages/heartbroken4.png", "images/happyimages/heartbroken5.png"]);
+
+       for (var i=0; i < 1; i++) {
+            var random = Math.floor(Math.random() * imagesHeartbroken.length);
+            var scale = randRange(150, 150);
+            var entity = new Entity(imagesHeartbroken[random], 0, 0, scale, scale,randRange(100, 100))
+ 
+            entity.x = randRange(0, level.width-entity.width);
+            entity.y = randRange(0, level.height-entity.height);
+
+            entities.push(entity);
+        }
+
+        main(0);
+    }
+
+    function panicPic() {
+
+        imagesPanic = loadImages(["images/happyimages/panic1.png", "images/happyimages/panic2.png", "images/happyimages/panic3.png","images/happyimages/panic4.png", "images/happyimages/panic5.png"]);
+
+       for (var i=0; i < 1; i++) {
+            var random = Math.floor(Math.random() * imagesPanic.length);
+            var scale = randRange(150, 150);
+            var entity = new Entity(imagesPanic[random], 0, 0, scale, scale,randRange(100, 100))
+ 
+            entity.x = randRange(0, level.width-entity.width);
+            entity.y = randRange(0, level.height-entity.height);
+
+            entities.push(entity);
+        }
+
+        main(0);
+    }
+
+    function rejectedPic() {
+
+        imagesRejected = loadImages(["images/happyimages/rejected1.png", "images/happyimages/rejected2.png", "images/happyimages/rejected3.png","images/happyimages/rejected4.png", "images/happyimages/rejected5.png"]);
+
+       for (var i=0; i < 1; i++) {
+            var random = Math.floor(Math.random() * imagesRejected.length);
+            var scale = randRange(150, 150);
+            var entity = new Entity(imagesRejected[random], 0, 0, scale, scale,randRange(100, 100))
+ 
+            entity.x = randRange(0, level.width-entity.width);
+            entity.y = randRange(0, level.height-entity.height);
+
+            entities.push(entity);
+        }
+
+        main(0);
+    }
+
     // Initialize the game
     function enthusiasticPic() {
         // Load images
@@ -98,7 +252,6 @@ window.onload = function() {
             // Add to the entities array
             entities.push(entity);
         }
-    
         // Enter main loop
         main(0);
     }
@@ -356,6 +509,40 @@ window.onload = function() {
 
     $('#btn-feeling-eight').on('click', function() {
         dynamicPic();
+    });
+
+    /////////////////////////SAD////////////////////////
+
+    $('#btn-feeling-one-sad').on('click', function() {
+         emptyPic();
+    });
+
+    $('#btn-feeling-two-sad').on('click', function() {
+         paralyzedPic();
+    });
+
+    $('#btn-feeling-three-sad').on('click', function() {
+        badPic();
+    });
+
+     $('#btn-feeling-four-sad').on('click', function() {
+        paralyzedPic();
+    });
+
+    $('#btn-feeling-five-sad').on('click', function() {
+        anxiousPic();
+    });
+
+    $('#btn-feeling-six-sad').on('click', function() {
+        heartbrokenPic();
+    });
+
+    $('#btn-feeling-seven-sad').on('click', function() {
+        panicPic();
+    });
+
+    $('#btn-feeling-eight-sad').on('click', function() {
+        rejectedPic();
     });
 };
 

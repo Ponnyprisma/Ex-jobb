@@ -12,7 +12,7 @@
 	}
 
 	@include for-tablet-portrait-up {
-		margin-top: $grid-gutter-width*4;
+		margin-top: $grid-gutter-width*2;
 	}
 
 	@include for-phone-only {
@@ -44,4 +44,7 @@
 	@include for-desktop-up {
 		width: 900px;
 	}
+}
+.container-loading-artwork {
+	display: none;
 }
