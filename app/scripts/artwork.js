@@ -91,7 +91,7 @@ window.onload = function() {
         imagesEmpty = loadImages(["images/happyimages/empty1.png", "images/happyimages/empty2.png", "images/happyimages/empty3.png","images/happyimages/empty4.png", "images/happyimages/empty5.png"]);
 
        for (var i=0; i < 1; i++) {
-            var random = Math.floor(Math.random() * imagesEmpty.length);
+            var random = Math.floor(Math.random() * 4);
             var scale = randRange(150, 150);
             var entity = new Entity(imagesEmpty[random], 0, 0, scale, scale,randRange(100, 100))
  
@@ -111,7 +111,7 @@ window.onload = function() {
        for (var i=0; i < 1; i++) {
             var random = Math.floor(Math.random() * imagesDepressed.length);
             var scale = randRange(150, 150);
-            var entity = new Entity(imagesDepressed[random], 0, 0, scale, scale,randRange(100, 100))
+            var entity = new Entity(imagesDepressed[random], 5, 5, scale, scale,randRange(100, 100))
  
             entity.x = randRange(0, level.width-entity.width);
             entity.y = randRange(0, level.height-entity.height);
@@ -130,7 +130,7 @@ window.onload = function() {
        for (var i=0; i < 1; i++) {
             var random = Math.floor(Math.random() * imagesBad.length);
             var scale = randRange(150, 150);
-            var entity = new Entity(imagesBad[random], 0, 0, scale, scale,randRange(100, 100))
+            var entity = new Entity(imagesBad[random], 5, 5, scale, scale,randRange(100, 100))
  
             entity.x = randRange(0, level.width-entity.width);
             entity.y = randRange(0, level.height-entity.height);

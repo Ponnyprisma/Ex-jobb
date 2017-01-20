@@ -1,15 +1,15 @@
 $(document).ready(function(){
-
+    var audio, playbtn;
     // Function to render Artwork
     function renderArtwork () {
         setTimeout(function() {
-                $('.container-loading-artwork').show();  
+                $('.view').hide(); 
+                $('.container-loading-artwork').show(); 
             setTimeout(function() {
-                $('view').hide();
                 $('.container-loading-artwork').hide();
                 $('.art-container').show();
             }, 3000);
-        }, 7000);
+        }, 3000);
     }
 
     function showStepThree () {
@@ -60,12 +60,34 @@ $(document).ready(function(){
         }, 1000);
     }
 
+    function initAudioPlayer () {
+        audio = new Audio();
+        audio.src = 'audio/simon_mathewson_-_13_-_Wunderkind.mp3';
+        audio.loop = true;
+        audio.play();
+        playbtn = document.getElementById('playpausebtn');
+        playbtn.addEventListener("click", playPause);
+    }
+
+
+    function playPause () {
+        if (audio.paused) {
+            audio.play();
+            playbtn.style.background = "url(../images/pause.svg) no-repeat";
+        } else {
+            audio.pause();
+            playbtn.style.background = "url(../images/play.svg) no-repeat";
+        }
+    }
+
+
     //////////////////////////////////////////////START HAPPY FLOW/////////////////////////////////////////
 
     $('#happy-smiley-btn').on('click', function(){
         $('#playpausebtn').show();
         $('#step-one').hide();
         $('#step-two').show();
+        initAudioPlayer();
     });
 
     //knapp 1
@@ -123,6 +145,7 @@ $(document).ready(function(){
         $('#playpausebtn').show();
         $('#step-two-sad').show();  
         $('#step-one').hide();
+        initAudioPlayer();
     });
 
     //knapp ett
@@ -180,5 +203,9 @@ $(document).ready(function(){
         $('.container-feeling-eight-sad').show();
        renderArtwork();
     });
+
+    $('#try-again').on('click', function() {
+        window.location.reload();
+    })
 
 });

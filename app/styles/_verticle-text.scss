@@ -34,8 +34,10 @@
 	position: absolute;
   right: $grid-gutter-width;
   bottom: $grid-gutter-width;
-  color: $color-hotpink;
-  cursor: pointer;
+
+    &:hover {
+      background: url(../images/heart-happy.svg) no-repeat;
+    }
 }
 
 button#playpausebtn {
@@ -53,61 +55,3 @@ button#playpausebtn {
 
 }
 
-.information-popup {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    text-align: center;
-    background: $color-purple;
-    background-size: cover;
-    z-index: 10;
-
-    h2 {
-      -webkit-transform: translate(0, -50%);
-      transform: translate(0, -50%);
-      position: absolute;
-      top: 20%;
-      left: 0;
-      right: 0;
-    }
-}
-
-.close-popup {
-  height: 40px;
-  background: url(../images/close.svg) no-repeat;
-  position: absolute;
-  right: 0;
-  left: 50%;
-  bottom: $grid-gutter-width;
-  cursor: pointer;
-
-}
-
-.wikitext {
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-}
-  
-/*
-button#mutebtn {
-  position: absolute;
-  top: $grid-gutter-width*2;
-  right: 0;
-  font-size: 34px;
-  padding-right: $grid-gutter-width;
-  background: url(../images/speaker.svg) no-repeat;
-  border: none;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-*/

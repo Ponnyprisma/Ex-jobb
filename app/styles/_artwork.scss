@@ -7,19 +7,13 @@
 
 .art-container {
 	display: none;
-	@include for-desktop-up {
-		margin-top: $grid-gutter-width;
-	}
-
-	@include for-tablet-portrait-up {
-		margin-top: $grid-gutter-width*2;
-	}
-
-	@include for-phone-only {
-		margin-top: 0px;
-	}
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translate(0, -50%);
 	
-	a {
+	a{
 		color: $color-white;
 		font-family: 'AvenirNext-Bold';
 		cursor: pointer;
@@ -29,6 +23,12 @@
 			color: $color-hotpink;
 			text-decoration: none;
 		}
+	}
+
+	#try-again {
+		color: $color-hotpink;
+		font-family: 'AvenirNext-Bold';
+		cursor: pointer;
 	}
 }
 
