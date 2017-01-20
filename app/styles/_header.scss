@@ -10,7 +10,8 @@ ul {
 		display: inline-block;
 		font-family: 'AvenirNext-Bold';
 		font-size: 14px;
-		 @include for-phone-only {
+		 
+		@include for-phone-only {
 		 	font-size: 11px;
 		 }
 
@@ -19,6 +20,7 @@ ul {
 			color: $color-white;
 			padding: $grid-gutter-width/2;
 			position: relative;
+			
 			@include for-phone-only {
 				padding: $grid-gutter-width/4;
 			}
@@ -38,9 +40,7 @@ ul {
 				right: 0;
 				background-color: $color-white;
 				visibility: hidden;
-				-webkit-transform: scaleX(0);
 				transform: scaleX(0);
-				-webkit-transition: all 0.2s ease-in-out 0s;
 				transition: all 0.2s ease-in-out 0s;
 			}
 
