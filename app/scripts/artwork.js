@@ -7,8 +7,8 @@ window.onload = function() {
     var context = canvas.getContext("2d");
     var initialized = false;
     
-    canvas.width = 400;
-    canvas.height = 500;
+    canvas.width = 300;
+    canvas.height = 400;
     
     // Level properties
     var level = {
