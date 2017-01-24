@@ -15,28 +15,44 @@
     imagesHeartbroken = ["images/happyimages/heartbroken1.png", "images/happyimages/heartbroken2.png", "images/happyimages/heartbroken3.png","images/happyimages/heartbroken4.png", "images/happyimages/heartbroken5.png"],
     imagesPanic = ["images/happyimages/panic1.png", "images/happyimages/panic2.png", "images/happyimages/panic3.png","images/happyimages/panic4.png", "images/happyimages/panic5.png"],
     imagesRejected = ["images/happyimages/rejected1.png", "images/happyimages/rejected2.png", "images/happyimages/rejected3.png","images/happyimages/rejected4.png", "images/happyimages/rejected5.png"],
-    finalArtwork = [];
-
-  
-
+    finalArtwork = [],
+    canvas = document.getElementById("canvas"), 
+    returnArray = [];
+ 
+/*
+var happyArray = ['happy1.jpg', 'happy2.jp'],
+    sadArray = ['sad1.jpg', 'sad2.jpg'],
+    finalArray = [],
+    canvas = minCanvas;
 
 function pickFromArray(array, number) {
     var returnArray = [];
 
-    for (var i = array - 1; i >= 0; i--) {
+    for (var i = number - 1; i >= 0; i--) {
         // Kolla om arrayen blir tom, breaka isf
-        returnArray.push(array[(0, array.length)]);
+        returnArray.push(array[rand(0, array.length)]);
     }
 
     return returnArray;
 }
 
+function drawImage(image) {
+    var img = new Image();
+    img.src = image;
+    canvas.drawImageOnCanvas(img, rand(0, canvas.width), rand(0, canvas.height));
+}
 
-$('#btn-feeling-one').on('click', function() {
-    finalArtwork.push(pickFromArray(imagesenthusiastic));
+function drawImages() {
+    for (var i = finalArray.length - 1; i >= 0; i--) {
+        drawImage(finalArray[i]);
+    }
+}
+
+$('happy-button').on('click', function() {
+    finalArray.push(pickFromArray(happyArray, rand(1,4)));
 
 });
 
-console.log(returnArray);
-
-
+$('final-button').on('click', function() {
+    drawImages();
+});*/

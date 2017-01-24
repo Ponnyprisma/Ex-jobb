@@ -459,14 +459,13 @@ window.onload = function() {
     
     // Draw a frame with a border
     function drawFrame() {
-      
         context.fillRect(0, 0, canvas.width, canvas.height);
         context.fillStyle = "#e8eaec";
     }
 
 
     function downloadCanvas(link, canvasId, filename) {
-        link.href = document.getElementById('canvas').toDataURL();
+        link.href = document.getElementById('canvas').toDataURL(1.0);
         link.download = filename;
     }
 
