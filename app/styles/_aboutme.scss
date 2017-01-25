@@ -19,10 +19,16 @@
 	}
 }
 
-.about-me-text {
+.about-me-header {
 	font-family: 'AvenirNext-Bold';
 	color: $color-hotpink;
 		
+	@include for-phone-only {
+		text-align: center;
+	}
+}
+
+.about-me-text {		
 	@include for-phone-only {
 		text-align: center;
 	}
