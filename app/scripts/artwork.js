@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
-
-
-var currentWidth = $(window).width();
+    // Changing the canvas size depend on window width
+    var currentWidth = $(window).width();
     
     if(currentWidth > 768) {
         canvas.width = 400;
@@ -10,19 +9,19 @@ var currentWidth = $(window).width();
     }
 
     if (currentWidth < 768) {
-        canvas.width = 300;
-        canvas.height = 400;
+        canvas.width = 250;
+        canvas.height = 350;
     }
-console.log(currentWidth);
-// The function gets called when the window is fully loaded
-window.onload = function() {
+
+    // The function gets called when the window is fully loaded
+    window.onload = function() {
+    
     // Get the canvas and context
     var canvas = document.getElementById("canvas"); 
     var context = canvas.getContext("2d");
     var initialized = false;
     
 
-    
     // Level properties
     var level = {
         x: 150,
@@ -42,8 +41,9 @@ window.onload = function() {
     
     // Array of entities
     var entities = [];
+
     
-    // Images
+    // Arrays 
     var images = [];
     var imagesFree = [];
     var imagesSatisfied = [];
@@ -69,8 +69,8 @@ window.onload = function() {
     
     // Load images
     function loadImages(imagefiles) {
+    
     // Initialize variables
-  
     loadtotal = imagefiles.length;
 
         // Load the images
@@ -100,14 +100,16 @@ window.onload = function() {
     }
 
     function emptyPic() {
-
+        // Loadning images
         imagesEmpty = loadImages(["images/happyimages/empty1.png", "images/happyimages/empty2.png", "images/happyimages/empty3.png","images/happyimages/empty4.png", "images/happyimages/empty5.png"]);
-
+        
+        // Create random entities
        for (var i=0; i < 1; i++) {
             var random = Math.floor(Math.random() * 4);
             var scale = randRange(150, 150);
             var entity = new Entity(imagesEmpty[random], 0, 0, scale, scale,randRange(100, 100))
- 
+            
+            // Set a random position
             entity.x = randRange(0, level.width-entity.width);
             entity.y = randRange(0, level.height-entity.height);
 
@@ -216,7 +218,7 @@ window.onload = function() {
             var random = Math.floor(Math.random() * imagesPanic.length);
             var scale = randRange(150, 150);
             var entity = new Entity(imagesPanic[random], 0, 0, scale, scale,randRange(100, 100))
- 
+            
             entity.x = randRange(0, level.width-entity.width);
             entity.y = randRange(0, level.height-entity.height);
 
@@ -234,7 +236,7 @@ window.onload = function() {
             var random = Math.floor(Math.random() * imagesRejected.length);
             var scale = randRange(150, 150);
             var entity = new Entity(imagesRejected[random], 0, 0, scale, scale,randRange(100, 100))
- 
+            
             entity.x = randRange(0, level.width-entity.width);
             entity.y = randRange(0, level.height-entity.height);
 
@@ -244,28 +246,22 @@ window.onload = function() {
         main(0);
     }
 
-    // Initialize the game
+
     function enthusiasticPic() {
-        // Load images
+
         images = loadImages(["images/happyimages/enthusiastic1.png", "images/happyimages/enthusiastic2.png", "images/happyimages/enthusiastic3.png", "images/happyimages/enthusiastic4.png", "images/happyimages/enthusiastic5.png"]);
         
-       // Create random entities
        for (var i=0; i < 1; i++) {
             var random = Math.floor(Math.random() * images.length);
             var scale = randRange(150, 150);
-            //var imageindex = i % images.length;
             var entity = new Entity(images[random], 0, 0, scale, scale,randRange(100, 100));
             
-            // Set a random position
-            // var entity = new Entity(images[imageindex], 0, 0, scale, scale,randRange(100, 100));
- 
             entity.x = randRange(0, level.width-entity.width);
             entity.y = randRange(0, level.height-entity.height);
             
-            // Add to the entities array
             entities.push(entity);
         }
-        // Enter main loop
+
         main(0);
     }
 
@@ -325,7 +321,7 @@ window.onload = function() {
 
 
     function uniqePic() {
-
+        
         imagesUnique = loadImages(["images/happyimages/unique1.png", "images/happyimages/unique2.png", "images/happyimages/unique3.png", "images/happyimages/unique4.png", "images/happyimages/unique5.png"]);
 
        for (var i=0; i < 1; i++) {
@@ -361,9 +357,9 @@ window.onload = function() {
     }
 
     function freePic() {
-        // Load images
+
         imagesFree = loadImages(["images/happyimages/free1.png", "images/happyimages/free2.png", "images/happyimages/free3.png", "images/happyimages/free4.png", "images/happyimages/free5.png"]);
-       // Create random entities
+       
        for (var i=0; i < 1; i++) {
             var random = Math.floor(Math.random() * imagesFree.length);
             var scale = randRange(150, 150);
@@ -374,14 +370,13 @@ window.onload = function() {
             entities.push(entity);
         }
     
-        // Enter main loop
         main(0);
     }
 
     function confidentPic() {
-        // Load images
+
         imagesConfident = loadImages(["images/happyimages/confident1.png", "images/happyimages/confident2.png", "images/happyimages/confident3.png", "images/happyimages/confident4.png", "images/happyimages/confident5.png"]);
-       // Create random entities
+
        for (var i=0; i < 1; i++) {
             var random = Math.floor(Math.random() * imagesConfident.length);
             var scale = randRange(150, 150);
@@ -392,14 +387,13 @@ window.onload = function() {
             entities.push(entity);
         }
     
-        // Enter main loop
         main(0);
     }
 
     function dynamicPic() {
-        // Load images
+
         imagesDynamic = loadImages(["images/happyimages/dynamic1.png", "images/happyimages/dynamic2.png", "images/happyimages/dynamic3.png", "images/happyimages/dynamic4.png", "images/happyimages/dynamic5.png"]);
-       // Create random entities
+
        for (var i=0; i < 1; i++) {
             var random = Math.floor(Math.random() * imagesDynamic.length);
             var scale = randRange(150, 150);
@@ -460,37 +454,36 @@ window.onload = function() {
     }
     
     function render() {
+        
         // Draw the frame
         drawFrame();
         
         for (var i=0; i<entities.length; i++) {
+            
             // Draw the entity
             var entity = entities[i];
             context.drawImage(entity.image, entity.x, entity.y, entity.width, entity.height);
         }
     }
     
-    // Draw a frame with a border
+    // Draw a frame with a border  
     function drawFrame() {
         context.fillRect(0, 0, canvas.width, canvas.height);
         context.fillStyle = "#e8eaec";
     }
 
-
+    // Download Canvas
     function downloadCanvas(link, canvasId, filename) {
         link.href = document.getElementById('canvas').toDataURL(1.0);
         link.download = filename;
     }
 
     document.getElementById('download').addEventListener('click', function() {
-        downloadCanvas(this, 'canvas', 'test.png');
+        downloadCanvas(this, 'canvas', 'artwork.png');
     }, false);
 
 
-    
-    // Call init to start the game
-   
-
+    // Call function to display images on Canvas
     $('#btn-feeling-one').on('click', function() {
          enthusiasticPic();
     });

@@ -33,3 +33,23 @@
 		text-align: center;
 	}
 }
+
+#me-pic {
+
+
+	@include for-phone-only {
+		width: 200px;
+	}
+
+	@include for-tablet-portrait-up {
+		width: 300px;
+	}
+
+	@include for-tablet-landscape-up {
+		width: 400px;
+	}
+
+	@include for-desktop-up {
+		width: 400px;
+	}
+}
