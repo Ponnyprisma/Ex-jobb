@@ -1,66 +1,64 @@
 $(document).ready(function(){
+    
     var audio, playbtn;
-    // Function to render Artwork
+    // FUNCTION REDER ARTWORK SAD AND HAPPY
     function renderArtwork () {
         setTimeout(function() {
                 $('.view').hide(); 
-                $('.container-loading-artwork').show(); 
+                $('.container-loading-artwork').show();
             setTimeout(function() {
                 $('.container-loading-artwork').hide();
-                $('.art-container').show();
-            }, 3000);
-        }, 3000);
+                $('.art-container').fadeIn(1000);
+            }, 4000);
+        }, 6000);
     }
 
-    function showStepThree () {
+    //HAPPY FUNCTION FLOW
+    function showStepThreeHappy () {
         setTimeout(function() {
+            $('#step-three').fadeIn(1000);
             $('.view').hide();  
-            $('#step-three').show();   //samma  
-            $('.headline-copy').fadeIn(2000);//samma
-        }, 1000);
+        }, 6000);
     }
 
-    function showStepFour () {
+    function showStepFourHappy () {
         setTimeout(function() {
-            $('#step-four').show();//samma
-            $('.view').hide();//samma   
-            $('.headline-copy').fadeIn(2000);//samma
-        }, 1000);
+            $('#step-four').fadeIn(1000);
+            $('.view').hide(); 
+        }, 6000);
     }
 
-    function showStepFive () {
+    function showStepFiveHappy () {
         setTimeout(function() {
-            $('#step-five').show(); 
+            $('#step-five').fadeIn(1000);
             $('.view').hide();      
-            $('.headline-copy').fadeIn(2000);
-        }, 1000);
+        }, 6000);
     }
 
+    //SAD FUNCTION FLOW
     function showStepThreeSad () {
             setTimeout(function() {
-                $('#step-three-sad').show(); 
+                $('#step-three-sad').fadeIn(1000);
                 $('.view').hide();      
-                $('.headline-copy').fadeIn(2000);
-        }, 1000);
+        }, 6000);
     }
 
     function showStepFourSad () {
         setTimeout(function() {
-                $('#step-four-sad').show(); 
+                $('#step-four-sad').fadeIn(1000);
                 $('.view').hide();      
-                $('.headline-copy').fadeIn(2000);
-        }, 1000);
+        }, 6000);
     }
 
     function showStepFiveSad () {
         setTimeout(function() {
-                $('#step-five-sad').show(); 
+                $('#step-five-sad').fadeIn(1000);
                 $('.view').hide();      
-                $('.headline-copy').fadeIn(2000);
-        }, 1000);
+        }, 6000);
     }
 
-    function initAudioPlayer () {
+    //MUSIC FUNCTION
+    function initAudioPlayerSad () {
         audio = new Audio();
         audio.src = 'audio/simon_mathewson_-_13_-_Wunderkind.mp3';
         audio.loop = true;
@@ -69,6 +67,15 @@ $(document).ready(function(){
         playbtn.addEventListener("click", playPause);
     }
 
+    function initAudioPlayerHappy () {
+        audio = new Audio();
+        audio.src = 'audio/The_Kyoto_Connection_-_01_-_Water.mp3';
+        audio.loop = true;
+        audio.play();
+        playbtn = document.getElementById('playpausebtn');
+        playbtn.addEventListener("click", playPause);
+
+    }
 
     function playPause () {
         if (audio.paused) {
@@ -86,46 +93,46 @@ $(document).ready(function(){
     $('#happy-smiley-btn').on('click', function(){
         $('#playpausebtn').show();
         $('#step-one').hide();
-        $('#step-two').show();
-        initAudioPlayer();
+        $('#step-two').fadeIn(2000);
+        initAudioPlayerHappy();
     });
 
     //knapp 1
     $('#btn-feeling-one').on('click', function() {
         $('.container-feeling-one').show();
-        $('#step-two').hide();//samma
-        showStepThree ();
+        $('#step-two').hide();
+        showStepThreeHappy();
     });
 
     //knapp 2
     $('#btn-feeling-two').on('click', function() {
-        $('#step-two').hide();//samma
+        $('#step-two').hide();
         $('.container-feeling-two').show();
-        showStepThree ();
+        showStepThreeHappy();
     });
     //knapp 3
     $('#btn-feeling-three').on('click', function() {
         $('#step-three').hide();
         $('.container-feeling-three').show();
-        showStepFour();
+        showStepFourHappy();
     });
     //knapp 4
     $('#btn-feeling-four').on('click', function() {
         $('#step-three').hide();
         $('.container-feeling-four').show();
-        showStepFour();
+        showStepFourHappy();
     });
     //knapp 5
     $('#btn-feeling-five').on('click', function() {
         $('.container-feeling-five').show();
         $('#step-four').hide();
-        showStepFive ();
+        showStepFiveHappy();
     });
     //knapp 6
     $('#btn-feeling-six').on('click', function() {
         $('.container-feeling-six').show();
         $('#step-four').hide();
-        showStepFive ();
+        showStepFiveHappy();
     });
     //knapp sju
     $('#btn-feeling-seven').on('click', function() {
@@ -143,23 +150,23 @@ $(document).ready(function(){
     //////////////////////////////////////////////START SAD FLOW/////////////////////////////////////////
     $('#sad-smiley-btn').on('click', function(){
         $('#playpausebtn').show();
-        $('#step-two-sad').show();  
+        $('#step-two-sad').fadeIn(1000);
         $('#step-one').hide();
-        initAudioPlayer();
+        initAudioPlayerSad();
     });
 
     //knapp ett
     $('#btn-feeling-one-sad').on('click', function() {
         $('#step-two-sad').hide();
         $('.container-feeling-one-sad').show();
-        showStepThreeSad ();
+        showStepThreeSad();
     });
 
     //knapp två
     $('#btn-feeling-two-sad').on('click', function () {
         $('#step-two-sad').hide();
         $('.container-feeling-two-sad').show();
-        showStepThreeSad ();
+        showStepThreeSad();
     });
 
     //knapp tre

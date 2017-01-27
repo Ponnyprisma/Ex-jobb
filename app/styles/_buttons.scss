@@ -53,21 +53,39 @@
 }
 
 #sad-smiley-btn {
+	@include for-big-desktop-up {
+  		margin-right: 120px;
+  	}
+
 	@include for-desktop-up {
 		margin-right: 100px;
 	}
+
 	@include for-tablet-portrait-up {
-		margin-right: 100px;
+		margin-right: 80px;
+
+	}
+
+	@include for-tablet-landscape-up {
+		margin-right: 200px;
 	}
 }
 
 #happy-smiley-btn {
+	@include for-big-desktop-up {
+  		margin-left: 120px;
+  	}
+
 	@include for-desktop-up {
-		margin-left: 80px;
+		margin-left: 100px;
 	}
 
 	@include for-tablet-portrait-up {
 		margin-left: 80px;
+	}
+
+	@include for-tablet-landscape-up {
+		margin-left: 200px;
 	}
 }
 
