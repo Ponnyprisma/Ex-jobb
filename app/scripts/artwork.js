@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+
+
+var currentWidth = $(window).width();
+    
+    if(currentWidth > 768) {
+        canvas.width = 400;
+        canvas.height = 500;
+    }
+
+    if (currentWidth < 768) {
+        canvas.width = 300;
+        canvas.height = 400;
+    }
+console.log(currentWidth);
 // The function gets called when the window is fully loaded
 window.onload = function() {
     // Get the canvas and context
@@ -7,8 +21,7 @@ window.onload = function() {
     var context = canvas.getContext("2d");
     var initialized = false;
     
-    canvas.width = 300;
-    canvas.height = 400;
+
     
     // Level properties
     var level = {
@@ -425,7 +438,7 @@ window.onload = function() {
                 setTimeout(function(){initialized = true;}, 1000);
             }
             } else {
-            // Update and render the game
+            // Update and render frame
             update(tframe);
             render();
         }
