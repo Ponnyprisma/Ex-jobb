@@ -484,6 +484,7 @@ $(document).ready(function(){
 
 
     // Call function to display images on Canvas
+
     $('#btn-feeling-one').on('click', function() {
          enthusiasticPic();
     });

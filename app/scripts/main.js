@@ -38,8 +38,8 @@ $(document).ready(function(){
 
     // Sad function flow
     function showStepThreeSad () {
-            setTimeout(function() {
-                $('#step-three-sad').fadeIn(1000);
+        setTimeout(function() {
+            $('#step-three-sad').fadeIn(1000);
                 $('.view').hide();      
         }, 6000);
     }
@@ -98,56 +98,56 @@ $(document).ready(function(){
         initAudioPlayerHappy();
     });
 
-    //Button 1
+    //STEP TWO Button 1 - Enthusiastic
     $('#btn-feeling-one').on('click', function() {
         $('.container-feeling-one').show();
         $('#step-two-happy').hide();
         showStepThreeHappy();
     });
 
-    //Button 2
+    //STEP TWO Button 2 - Satisfied
     $('#btn-feeling-two').on('click', function() {
         $('#step-two-happy').hide();
         $('.container-feeling-two').show();
         showStepThreeHappy();
     });
 
-    //Button 3
+    // STEP THREE Button 3 - Unique
     $('#btn-feeling-three').on('click', function() {
         $('#step-three-happy').hide();
         $('.container-feeling-three').show();
         showStepFourHappy();
     });
 
-    //Button 4
+    //STEP THREE Button 4 - peaceful
     $('#btn-feeling-four').on('click', function() {
         $('#step-three-happy').hide();
         $('.container-feeling-four').show();
         showStepFourHappy();
     });
 
-    //Button 5
-    $('#btn-feeling-five-happy').on('click', function() {
+    //STEP FOUR Button 5 -Lucky 
+    $('#btn-feeling-five').on('click', function() {
         $('.container-feeling-five').show();
         $('#step-four-happy').hide();
         showStepFiveHappy();
     });
 
-    //Button 6
+    //STEP FOUR Button 6 -Free
     $('#btn-feeling-six').on('click', function() {
         $('.container-feeling-six').show();
         $('#step-four-happy').hide();
         showStepFiveHappy();
     });
     
-    //Button 7
+    //STEP FIVE Button 7 - Confident
     $('#btn-feeling-seven').on('click', function() {
         $('.container-feeling-seven').show();
         $('#step-five-happy').hide();
         renderArtwork();
     });
 
-    //Button 8
+    //STEP FIVE Button 8 - Dynamic
     $('#btn-feeling-eight').on('click', function() {
         $('.container-feeling-eight').show();
         $('#step-five-happy').hide();
@@ -164,56 +164,56 @@ $(document).ready(function(){
         initAudioPlayerSad();
     });
 
-    // Button 1
+    //STEP TWO SAD Button 1 - Empty
     $('#btn-feeling-one-sad').on('click', function() {
         $('#step-two-sad').hide();
         $('.container-feeling-one-sad').show();
         showStepThreeSad();
     });
 
-    // Button 2
+    //STEP TWO SAD Button 2 - Depressed
     $('#btn-feeling-two-sad').on('click', function () {
         $('#step-two-sad').hide();
         $('.container-feeling-two-sad').show();
         showStepThreeSad();
     });
 
-    // Button 3
+    //STEP three SAD Button 3 - Bad
     $('#btn-feeling-three-sad').on('click', function () {
         $('#step-three-sad').hide();
         $('.container-feeling-three-sad').show();
         showStepFourSad();
     });
 
-    // Button 4
+    //STEP three SAD Button 4 - Paralyzed
     $('#btn-feeling-four-sad').on('click', function () {
         $('#step-three-sad').hide();
         $('.container-feeling-four-sad').show();
         showStepFourSad();
     });
 
-    // Button 5
+    //STEP four SAD Button 5 - Anxious
     $('#btn-feeling-five-sad').on('click', function () {
         $('#step-four-sad').hide();
         $('.container-feeling-five-sad').show();
         showStepFiveSad();
     });
 
-    // Button 6
+    //STEP four SAD Button 6 - Heartbroken
     $('#btn-feeling-six-sad').on('click', function () {
         $('#step-four-sad').hide();
         $('.container-feeling-six-sad').show();
         showStepFiveSad();
     });
 
-    // Button 7
+    //STEP five SAD Button 7 - Panic
     $('#btn-feeling-seven-sad').on('click', function() {
         $('#step-five-sad').hide();
         $('.container-feeling-seven-sad').show();
         renderArtwork();
     });
 
-    // Button 8
+    //STEP five SAD Button 8 - Rejected
     $('#btn-feeling-eight-sad').on('click', function() {
         $('#step-five-sad').hide();
         $('.container-feeling-eight-sad').show();
